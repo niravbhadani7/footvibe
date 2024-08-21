@@ -1,0 +1,77 @@
+@import "../../../styles/index.scss";
+
+.hero-banner {
+  @media screen and (max-width: 768px) {
+    height: 400px;
+    h1{
+        @include font55;
+    }
+    button{
+        @include font30;
+    }
+    
+  }
+  position: relative;
+  height: 650px;
+  width: 100%;
+  animation: background-images 20s infinite step-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  @keyframes background-images {
+    0% {
+      background-image: url(../../../assets/image/shoes1.webp);
+    }
+    25% {
+      background-image: url(../../../assets/image/shoes2.webp);
+    }
+    50% {
+      background-image: url(../../../assets/image/shoes3.webp);
+    }
+    75% {
+      background-image: url(../../../assets/image/shoes4.webp);
+    }
+    100% {
+      background-image: url(../../../assets/image/shoes1.webp);
+    }
+  }
+h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    @include font60;
+    color: #ffffff;
+    text-align: center;
+    z-index: 99;
+}
+button{
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include font20;
+    color: #ffffff;
+    background-color: #c30001;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99;
+    &:hover{
+        color: #fff;
+      background-color: #f10001;
+        transition: .5s ease-in-out;
+    }
+}
+.layer{
+    z-index: 9;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+  }
+}
