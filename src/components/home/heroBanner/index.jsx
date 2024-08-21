@@ -1,5 +1,5 @@
 import React from 'react'
-import './heroBanner.scss'
+import './herobanner.scss'
 
 export default function Herobanner() {
   return (

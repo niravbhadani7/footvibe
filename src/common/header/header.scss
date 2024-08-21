@@ -60,9 +60,9 @@ header {
           align-items: center;
           gap: 16px;
           .header-search {
-            @media (max-width: 1000px) {
-              display: none;
-            }
+            // @media (max-width: 1000px) {
+            //   display: none;
+            // }
             cursor: pointer;
             align-items: center;
             display: flex;
@@ -82,9 +82,9 @@ header {
             gap: 16px;
             align-items: center;
             .header-fav {
-              @media (max-width: 1000px) {
-                display: none;
-              }
+              // @media (max-width: 1000px) {
+              //   display: none;
+              // }
               cursor: pointer;
               align-items: center;
               display: flex;
@@ -100,9 +100,9 @@ header {
               }
             }
             .header-cart {
-              @media (max-width: 1000px) {
-                display: none;
-              }
+              // @media (max-width: 1000px) {
+              //   display: none;
+              // }
               cursor: pointer;
               display: flex;
               flex-direction: column;
@@ -118,9 +118,9 @@ header {
               }
             }
             .header-login {
-              @media (max-width: 1000px) {
-                display: none;
-              }
+              // @media (max-width: 1000px) {
+              //   display: none;
+              // }
               cursor: pointer;
               display: flex;
               flex-direction: column;
@@ -138,17 +138,17 @@ header {
               }
             }
             .header-menu {
-              @media (max-width: 1000px) {
-                display: block;
-              }
+              // @media (max-width: 1000px) {
+              //   display: block;
+              // }
               display: none;
               overflow: hidden;
-              .menu-icon {
-                @media (max-width: 1000px) {
-                  font-size: 27px;
-                  fill: #101010;
-                }
-              }
+              // .menu-icon {
+              //   @media (max-width: 1000px) {
+              //     font-size: 27px;
+              //     fill: #101010;
+              //   }
+              // }
               .menu {
                 position: fixed;
                 top: 0;
