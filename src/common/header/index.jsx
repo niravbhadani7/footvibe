@@ -42,43 +42,41 @@ function Header() {
               <img src={logo} alt="logo" />
             </Link>
           </div>
-          <div className="header-menu-item">
-            <div className="menu-item">
-              {category.map((item) => {
-                return (
-                  <div className="hide" key={item.category}>
-                    <Link to={item.path}>{item.category}</Link>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="user-tools">
-              <div className="header-fav-cart">
-                <div className="header-search">
-                <IoSearchOutline className="search-icon"/>
+          <div className="menu-item">
+            {category.map((item) => {
+              return (
+                <div className="hide" key={item.category}>
+                  <Link to={item.path}>{item.category}</Link>
+                </div>
+              );
+            })}
+          </div>
+          <div className="user-tools">
+            <div className="header-fav-cart">
+              <div className="header-search">
+                <IoSearchOutline className="search-icon" />
                 <p>Search</p>
-                </div>
-                <div className="header-fav">
-                  <IoIosHeartEmpty className="fav-icon" />
-                  <p>Wishlist</p>
-                </div>
-                <div className="header-cart">
-                  <IoCartOutline className="bag-icon" />
-                  <p>Store</p>
-                </div>
-                <div className="header-login">
-                  <Link to={"/login"}>
-                    <img src={Login} />
-                    <p>Profile</p>
-                  </Link>
-                </div>
-                <div className="header-menu">
-                  <FiMenu className="menu-icon" onClick={handleShowMenu} />
-                  <div className={`menu ${showMenu ? "open" : ""}`}>
-                    <p>menu</p>
-                    <p>menu</p>
-                    <p>menu</p>
-                  </div>
+              </div>
+              <div className="header-fav">
+                <IoIosHeartEmpty className="fav-icon" />
+                <p>Wishlist</p>
+              </div>
+              <div className="header-cart">
+                <IoCartOutline className="bag-icon" />
+                <p>Store</p>
+              </div>
+              <div className="header-login">
+                <Link to={"/login"}>
+                  <img src={Login} />
+                  <p>Profile</p>
+                </Link>
+              </div>
+              <div className="header-menu">
+                <FiMenu className="menu-icon" onClick={handleShowMenu} />
+                <div className={`menu ${showMenu ? "open" : ""}`}>
+                  <p>menu</p>
+                  <p>menu</p>
+                  <p>menu</p>
                 </div>
               </div>
             </div>
