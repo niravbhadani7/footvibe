@@ -29,9 +29,9 @@ header {
           // margin: 0 auto;
         }
         img {
-          @media screen and (max-width: 450px) {
-            height: 50px;
-          }
+          // @media screen and (max-width: 450px) {
+          //   height: 50px;
+          // }
           width: 70px;
           height: 70px;
           display: block;
@@ -102,7 +102,7 @@ header {
           flex-direction: column;
           .search-icon {
             @media screen and (max-width: 550px) {
-              font-size: 24px;
+              font-size: 25px;
             }
             font-size: 27px;
             fill: #101010;
@@ -133,7 +133,7 @@ header {
             flex-direction: column;
             .fav-icon {
               @media screen and (max-width: 550px) {
-                font-size: 24px;
+                font-size: 26px;
               }
               font-size: 27px;
               fill: #101010;
