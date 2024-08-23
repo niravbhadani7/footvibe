@@ -1,6 +1,6 @@
 import React from 'react'
 import './herobanner.scss'
-import HeroBanner from '../../../assets/image/herobanner.jpeg'
+import HeroBanner from '../../../assets/image/herobanner.jpg'
 
 export default function Herobanner() {
   return (
