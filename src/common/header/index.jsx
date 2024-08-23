@@ -8,11 +8,56 @@ import Login from "../../assets/icon/profile-about-mobile-ui-svgrepo-com.svg";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
+import { FaCaretDown } from "react-icons/fa";
 
 const category = categoryApi;
 function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const openNav = () => {
+    setIsNavOpen(true);
+    document.body.style.overflowY = "hidden";
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <header>
+      <div className={`sidenav ${isNavOpen ? "open" : ""}`}>
+        <div className="closebtn" onClick={closeNav}>
+          &times;
+        </div>
+        <Link className="menu-item" to={"/"}>
+          Home
+        </Link>
+        <div className="menu-item category" onClick={toggleDropdown}>
+          Category
+          <FaCaretDown />
+        </div>
+        <div className={`dropdown-category ${dropdownOpen ? "open" : ""}`}>
+          {categoryApi.map((item, index) => {
+            return (
+              <Link to={item.path} key={index} onClick={closeNav}>
+                {item.category}
+              </Link>
+            );
+          })}
+        </div>
+        <Link className="menu-item" to={"/shop"} onClick={closeNav}>
+          Shop
+        </Link>
+        <Link className="menu-item" to={"/profile"} onClick={closeNav}>
+          Profile{" "}
+        </Link>
+      </div>
       <div className="container">
         <div className="header-main">
           <div className="header-logo">
@@ -49,13 +94,8 @@ function Header() {
                   <p>Profile</p>
                 </Link>
               </div>
-              <div className="header-menu">
+              <div onClick={openNav} className="header-menu">
                 <FiMenu className="menu-icon" />
-                <div className="menu">
-                  <p>menu</p>
-                  <p>menu</p>
-                  <p>menu</p>
-                </div>
               </div>
             </div>
           </div>
