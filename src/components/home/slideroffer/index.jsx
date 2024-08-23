@@ -12,6 +12,10 @@ function Slideroffer() {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 3000,
+    // cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
   };

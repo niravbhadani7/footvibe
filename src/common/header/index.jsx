@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./header.scss";
 import logo from "../../assets/logo/Logo_NIKE.svg";
 import { IoCartOutline } from "react-icons/io5";
-import { IoIosHeartEmpty } from "react-icons/io";
+import { MdFavoriteBorder } from "react-icons/md";
 import categoryApi from "../../categoryApi/categoryApi";
 import Login from "../../assets/icon/profile-about-mobile-ui-svgrepo-com.svg";
 import { FiMenu } from "react-icons/fi";
@@ -18,9 +18,10 @@ function Header() {
     setIsNavOpen(true);
     document.body.style.overflowY = "hidden";
   };
-
+  
   const closeNav = () => {
     setIsNavOpen(false);
+    document.body.style.overflowY = "auto";
   };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -81,7 +82,7 @@ function Header() {
                 <p>Search</p>
               </div>
               <div className="header-fav">
-                <IoIosHeartEmpty className="fav-icon" />
+                <MdFavoriteBorder className="fav-icon" />
                 <p>Wishlist</p>
               </div>
               <div className="header-cart">
