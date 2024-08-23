@@ -11,28 +11,6 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const category = categoryApi;
 function Header() {
-  const [showMenu, setShowMenu] = useState(false);
-  const menuRef = useRef(null); // Reference to the menu element
-
-  const handleShowMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setShowMenu(false);
-    }
-  };
-
-  useEffect(() => {
-    // Add event listener for clicks outside the menu
-    document.addEventListener("mousedown", handleClickOutside);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []); // Ensure the effect runs only once
   return (
     <header>
       <div className="container">
@@ -72,8 +50,8 @@ function Header() {
                 </Link>
               </div>
               <div className="header-menu">
-                <FiMenu className="menu-icon" onClick={handleShowMenu} />
-                <div className={`menu ${showMenu ? "open" : ""}`}>
+                <FiMenu className="menu-icon" />
+                <div className="menu">
                   <p>menu</p>
                   <p>menu</p>
                   <p>menu</p>

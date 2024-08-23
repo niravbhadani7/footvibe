@@ -1,35 +1,33 @@
 @import "../../styles/index.scss";
 
 header {
-  @media screen and (max-width: 650px) {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  @media (max-width: 650px) {
      padding: 0;    
   }
+  z-index: 99;
   padding: 10px;
-  background-color: #fff;
-  height: 100%;
+  background-color: rgba(227, 216, 211, 0.8);
+  // height: 100%;
   max-width: 100%;
   .container {
     .header-main {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @media screen and (max-width: 1000px) {
+      @media (max-width: 1000px) {
         justify-content: space-between;
       }
-      // @media screen and (max-width: 550px) {
-      //   display: grid;
-      //   grid-template-columns: repeat(2 ,1fr);
-      //   justify-items: center;
-        
-      // }
 
       .header-logo {
-        @media screen and (max-width:550px) {
+        @media (max-width:550px) {
           grid-column: 1/3;
           // margin: 0 auto;
         }
         img {
-          // @media screen and (max-width: 450px) {
+          // @media (max-width: 450px) {
           //   height: 50px;
           // }
           width: 70px;
@@ -38,15 +36,15 @@ header {
         }
       }
       .menu-item {
-        @media screen and (max-width: 768px) {
+        @media (max-width: 768px) {
           justify-content: space-between;
           gap: 25px;
         }
-        @media screen and (max-width: 650px) {
+        @media (max-width: 650px) {
           justify-content: center;
           gap: 20px;
         }
-        @media screen and (max-width: 550px) {
+        @media(max-width: 550px) {
           display: none;
         }
         display: flex;
@@ -54,14 +52,14 @@ header {
         .hide {
           overflow: hidden;
           a {
-            @media screen and (max-width: 600px) {
+            @media (max-width: 600px) {
               font-size: 16px;
               font-weight: 600;
             }
             font-size: 18px;
             font-weight: 600;
             position: relative;
-            color: #101010;
+            color:var(--theme-gray-100-text);
             &:hover {
               color: var(--theme-danger-background);
               &::before {
@@ -93,7 +91,7 @@ header {
           @media (max-width: 1000px) {
             display: none;
           }
-          @media screen and (max-width: 550px) {
+          @media (max-width: 550px) {
             display: block;
           }
           cursor: pointer;
@@ -101,14 +99,14 @@ header {
           display: flex;
           flex-direction: column;
           .search-icon {
-            @media screen and (max-width: 550px) {
+            @media (max-width: 550px) {
               font-size: 25px;
             }
             font-size: 27px;
             fill: #101010;
           }
           p {
-            @media screen and (max-width: 550px) {
+            @media (max-width: 550px) {
               display: none;
             }
             font-size: 12px;
@@ -124,7 +122,7 @@ header {
             @media (max-width: 1000px) {
               display: none;
             }
-            @media screen and (max-width: 550px) {
+            @media (max-width: 550px) {
               display: block;
             }
             cursor: pointer;
@@ -132,14 +130,14 @@ header {
             display: flex;
             flex-direction: column;
             .fav-icon {
-              @media screen and (max-width: 550px) {
+              @media (max-width: 550px) {
                 font-size: 26px;
               }
               font-size: 27px;
               fill: #101010;
             }
             p {
-              @media screen and (max-width: 550px) {
+              @media (max-width: 550px) {
                 display: none;
               }
               font-size: 12px;
@@ -196,7 +194,7 @@ header {
                 font-size: 27px;
                 fill: #101010;
               }
-              @media screen and (max-width: 550px) {
+              @media (max-width: 550px) {
                 font-size: 24px;
               }
             }

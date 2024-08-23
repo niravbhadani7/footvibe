@@ -2,8 +2,12 @@
 
 .hero-banner {
   @media screen and (max-width: 500px) {
-    width: 100%;
     height: 500px;
+    background-size: cover;
+  }
+  @media screen and (max-width: 320px) {
+    height: 500px;
+    background-size: cover;
   }
   position: relative;
   height: 650px;
@@ -86,6 +90,6 @@ button{
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.5);
   }
 }
