@@ -1,6 +1,7 @@
 @import "../../styles/index.scss";
 
 header {
+  position: relative;
   @media (max-width: 650px) {
     padding: 0;
   }
@@ -209,25 +210,29 @@ header {
 }
 
 .sidenav {
-  min-height: 100%;
-  width: 0;
   position: fixed;
   top: 0;
   right: 0;
+  height: 100vh;
+  width: 0;
   background-color: #fff;
-  overflow-x: hidden;
+  overflow-y: scroll;
   padding-top: 70px;
   transition: 0.5s;
   z-index: 9999;
 
   &.open {
     width: 100%;
+
+    @media (min-width: 830px) {
+      width: 0%;
+    }
   }
 
   .dropdown-category {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: hidden;
     max-height: 0;
     background-color: #f3f3f3;
     transition: max-height 0.5s ease, padding 0.3s ease;

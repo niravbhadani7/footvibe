@@ -1,9 +1,26 @@
 @import '../../../styles/index.scss';
 
 .slideroffer {
+position: relative;
+
+// @media (max-width: 830px) {
+//    z-index: -1;
+// }
     .slick-dots{
+       @media (max-width: 768px) {
+        font-size: 18px; 
+        bottom: 15px;
+      }
+      @media (max-width: 500px) {
+         font-size: 15px; 
+         bottom: 12px;
+      }
+      @media (max-width: 400px) {
+         font-size: 13px;
+         bottom: 8px;
+      } 
         position: absolute;
-        bottom: 25px;
+        bottom: 18px;
         display: block;
         width: 100%;
         padding: 0;
@@ -14,6 +31,15 @@
             button:before{
                 color: red;
                 font-size: 14px;
+                @media (max-width: 768px) {
+                  font-size: 13px; 
+                }
+                @media (max-width: 500px) {
+                   font-size: 12px; 
+                }
+                @media (max-width: 400px) {
+                   font-size: 11px;
+                } 
             }
             
         }
@@ -23,6 +49,15 @@
                 font-size: 18px;
                 opacity: 0.9;
                 color: red;
+                @media (max-width: 768px) {
+                  font-size: 16px; 
+                }
+                @media (max-width: 500px) {
+                   font-size: 14px; 
+                }
+                @media (max-width: 400px) {
+                   font-size: 13px;
+                } 
             }
         }
     }
@@ -32,7 +67,16 @@
     align-items: center;
     overflow: hidden;
     img{
-        object-fit: cover;
+      @media (max-width: 768px) {
+        height: 350px;
+       }
+       @media (max-width: 500px) {
+         height: 275px; 
+       }
+       @media (max-width: 400px) {
+          height: 200px;
+       } 
+      //   object-fit: cover;
         width: 100%;
         display: block;
     }

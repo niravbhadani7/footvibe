@@ -17,11 +17,15 @@ function Header() {
   const openNav = () => {
     setIsNavOpen(true);
     document.body.style.overflowY = "hidden";
+    // .slideroffer
+    document.querySelector('.slideroffer').style.zIndex = "-1";
+
   };
 
   const closeNav = () => {
     setIsNavOpen(false);
     document.body.style.overflowY = "auto";
+    document.querySelector('.slideroffer').style.zIndex = "0";
   };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
