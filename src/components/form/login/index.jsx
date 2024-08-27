@@ -1,29 +1,28 @@
-import React from "react";
-import "./login.scss";
+import React, { useState } from "react";
+import "../signup.scss";
 import { Link } from "react-router-dom";
 
-function Login() {
+export default function Login() {
+  
   return (
-    <div className="login">
+    <div className="signup">
       <div className="container">
         <section>
           <h1>Login</h1>
           <label>
-            <span>Username</span>
-            <input type="text" />
+            Username <span></span>
+            <input type="text" name="username" />
           </label>
           <label>
-            <span>Password</span>
-            <input type="password" />
+            Password <span></span>
+            <input type="password" name="password"/>
           </label>
-          <button>Login</button>
+          <button >Login</button>
           <p>
-            Don't have an account? <Link to="/signup">Sign up</Link>
+            Already have an account? <Link to="/signup">Signup</Link>
           </p>
         </section>
       </div>
     </div>
   );
 }
-
-export default Login;

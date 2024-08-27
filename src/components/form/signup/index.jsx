@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./signup.scss";
+import "../signup.scss";
 import { Link } from "react-router-dom";
 
 export default function Signup() {
