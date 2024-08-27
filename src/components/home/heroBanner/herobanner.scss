@@ -1,19 +1,17 @@
 @import "../../../styles/index.scss";
 
 .hero-banner {
-  width: 100%;
-  // height: 800px;
   img{
-    // @media (max-width: 768px) {
-    //   object-fit: cover;
-    //   display: block;
-    // }
-    object-fit: cover;  
-    max-width: 100%;
-    // height: 100%;
-    position: relative;
+    @media (max-width: 936px) {
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    width: 100%;
+    height: 700px;
     display: block;
-    // object-fit: cover;
+    object-fit: cover;
   }
 }
 // .layer{

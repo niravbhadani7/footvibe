@@ -4,7 +4,7 @@ import logo from "../../assets/logo/Logo_NIKE.svg";
 import { IoCartOutline } from "react-icons/io5";
 import { MdFavoriteBorder } from "react-icons/md";
 import categoryApi from "../../categoryApi/categoryApi";
-import Login from "../../assets/icon/profile-about-mobile-ui-svgrepo-com.svg";
+import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
@@ -18,7 +18,7 @@ function Header() {
     setIsNavOpen(true);
     document.body.style.overflowY = "hidden";
   };
-  
+
   const closeNav = () => {
     setIsNavOpen(false);
     document.body.style.overflowY = "auto";
@@ -91,7 +91,7 @@ function Header() {
               </div>
               <div className="header-login">
                 <Link to={"/login"}>
-                  <img src={Login} />
+                  <CgProfile className="profile-icon" />
                   <p>Profile</p>
                 </Link>
               </div>
