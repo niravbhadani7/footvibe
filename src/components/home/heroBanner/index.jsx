@@ -5,7 +5,7 @@ import HeroBanner from '../../../assets/image/herobanner.jpg'
 export default function Herobanner() {
   return (
     <div className='hero-banner'>
-      <img src={HeroBanner}/>
+      <img src={HeroBanner} alt='heroImg'/>
       <div className='layer'></div>
     </div>
   )

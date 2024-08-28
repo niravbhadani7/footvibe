@@ -215,14 +215,14 @@ header {
   right: 0;
   height: 100vh;
   width: 0;
-  background-color: #fff;
+  background-color: #f96868;
   overflow-y: scroll;
-  padding-top: 70px;
+  padding-top: 71px;
   transition: 0.5s;
   z-index: 9999;
 
   &.open {
-    width: 100%;
+    width: 60%;
 
     @media (min-width: 830px) {
       width: 0%;
@@ -244,32 +244,42 @@ header {
     }
 
     a {
-      padding: 10px 15px 10px 40px;
+      padding: 8px 10px 8px 40px;
       color: var(--theme-primary-color);
-      font-size: 20px;
+      font-size: 15px;
     }
   }
-
-  .closebtn {
+  .menu-header{
     position: absolute;
     top: 10px;
-    right: 40px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 86%;
+    align-items: center;
+    
+  }
+  .closebtn {
     font-size: 35px;
     cursor: pointer;
   }
+  .menu-text{
+    font-size: 20px;
+    
+  }
+
 
   .menu-item {
     width: 100%;
-    padding: 20px 15px;
+    padding: 5px 15px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #080707;
     display: block;
     transition: 0.3s;
-    border: 2px solid black;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-bottom: 1px solid;
+    // box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 5px 0px,
+    //   rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
     &.category {
       display: flex;

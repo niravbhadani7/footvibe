@@ -44,19 +44,19 @@ function Slideroffer() {
   return (
     <Slider {...settings} className="slideroffer">
       <div>
-        <img src={Slider4} />
+        <img src={Slider4} alt="sliderImg4"/>
       </div>
       <div>
-        <img src={Slider5} />
+        <img src={Slider5} alt="sliderImg5"/>
       </div>
       <div>
-        <img src={Slider1} />
+        <img src={Slider1} alt="sliderImg1"/>
       </div>
       <div>
-        <img src={Slider2} />
+        <img src={Slider2} alt="sliderImg2"/>
       </div>
       <div>
-        <img src={Slider3} />
+        <img src={Slider3} alt="sliderImg3"/>
       </div>
     </Slider>
   );

@@ -37,8 +37,14 @@ function Header() {
   return (
     <header>
       <div className={`sidenav ${isNavOpen ? "open" : ""}`}>
-        <div className="closebtn" onClick={closeNav}>
-          &times;
+        <div className="menu-header">
+          <div className="menu-text">
+            MENU
+          </div>
+          <div className="closebtn" onClick={closeNav}>
+            &times;
+          </div>
+
         </div>
         <Link className="menu-item" to={"/"}>
           Home
@@ -48,7 +54,7 @@ function Header() {
           <FaCaretDown />
         </div>
         <div className={`dropdown-category ${dropdownOpen ? "open" : ""}`}>
-          {categoryApi.map((item, index) => {
+          {category.map((item, index) => {
             return (
               <Link to={item.path} key={index} onClick={closeNav}>
                 {item.category}
