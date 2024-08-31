@@ -3,6 +3,7 @@ import DefaultLayout from "./defaultLayout/defaultLayout";
 import Home from "../components/home";
 import Signup from "../components/form/signup";
 import Login from "../components/form/login";
+import Women from "../components/women";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        category: "cOLLECTIONS",
+        category: "COLLECTIONS",
         path: "/Collections",
         element: <h1>New & Featured</h1>,
       },
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       {
         category: "WOMEN",
         path: "/Women",
-        element: <h1>Women</h1>,
+        element: <Women/>,
       },
       {
         category: "KIDS",

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./header.scss";
-import logo from "../../assets/logo/Logo_NIKE.svg";
+import Logo from '../../assets/logo/logo (1).svg'
 import { IoCartOutline } from "react-icons/io5";
 import { MdFavoriteBorder } from "react-icons/md";
 import categoryApi from "../../categoryApi/categoryApi";
@@ -12,20 +12,20 @@ import { FaCaretDown } from "react-icons/fa";
 
 const category = categoryApi;
 function Header() {
+ 
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const openNav = () => {
     setIsNavOpen(true);
     document.body.style.overflowY = "hidden";
     // .slideroffer
-    document.querySelector('.slideroffer').style.zIndex = "-1";
-
+    document.querySelector(".slideroffer").style.zIndex = "-1";
   };
 
   const closeNav = () => {
     setIsNavOpen(false);
     document.body.style.overflowY = "auto";
-    document.querySelector('.slideroffer').style.zIndex = "0";
+    document.querySelector(".slideroffer").style.zIndex = "0";
   };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -38,13 +38,10 @@ function Header() {
     <header>
       <div className={`sidenav ${isNavOpen ? "open" : ""}`}>
         <div className="menu-header">
-          <div className="menu-text">
-            MENU
-          </div>
+          <div className="menu-text">MENU</div>
           <div className="closebtn" onClick={closeNav}>
             &times;
           </div>
-
         </div>
         <Link className="menu-item" to={"/"}>
           Home
@@ -73,7 +70,7 @@ function Header() {
         <div className="header-main">
           <div className="header-logo">
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img src={Logo} alt="logo" />
             </Link>
           </div>
           <div className="menu-item">
@@ -87,10 +84,6 @@ function Header() {
           </div>
           <div className="user-tools">
             <div className="header-fav-cart">
-              <div className="header-search">
-                <IoSearchOutline className="search-icon" />
-                <p>Search</p>
-              </div>
               <div className="header-fav">
                 <MdFavoriteBorder className="fav-icon" />
                 <p>Wishlist</p>
@@ -98,6 +91,7 @@ function Header() {
               <div className="header-cart">
                 <IoCartOutline className="bag-icon" />
                 <p>Store</p>
+                <div className="header-cart-count">0</div>
               </div>
               <div className="header-login">
                 <Link to={"/login"}>

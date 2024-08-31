@@ -1,0 +1,20 @@
+@import "../styles/index.scss";
+
+.cart{
+    display: grid;
+    gap: 20px;
+    padding: 50px 20px;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    align-items: center;
+    // padding: 1rem;
+    border: 1px solid var(--theme-muted-border);
+    margin-bottom: 1rem;
+    .cart-card{
+        border: 1px solid #000;
+        padding: 20px;
+      h3{
+        font-size: 30px;
+      }
+    }
+}

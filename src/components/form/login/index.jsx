@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "../signup.scss";
 import { Link } from "react-router-dom";
 
+
 export default function Login() {
+  const [login, setLogin] = useState({ username: "", password: "" });
   
   return (
     <div className="signup">

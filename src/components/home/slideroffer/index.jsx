@@ -1,11 +1,11 @@
 import React from "react";
 import Slider from "react-slick";
 import "./slideroffer.scss";
-import Slider1 from "../../../assets/image/slider (1).jpg";
-import Slider2 from "../../../assets/image/slider (2).jpg";
-import Slider3 from "../../../assets/image/slider (3).jpg";
-import Slider4 from "../../../assets/image/slider (4).jpg";
-import Slider5 from "../../../assets/image/slider (5).jpg";
+import Slider1 from "../../../assets/image/slider (1).webp";
+import Slider2 from "../../../assets/image/slider (2).webp";
+import Slider3 from "../../../assets/image/slider (3).webp";
+import Slider4 from "../../../assets/image/slider (4).webp";
+import Slider5 from "../../../assets/image/slider (5).webp";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 
