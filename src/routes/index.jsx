@@ -4,6 +4,7 @@ import Home from "../components/home";
 import Signup from "../components/form/signup";
 import Login from "../components/form/login";
 import Women from "../components/women";
+import Category from "./category/category";
 
 const router = createBrowserRouter([
   {
@@ -22,31 +23,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        category: "COLLECTIONS",
-        path: "/Collections",
-        element: <h1>New & Featured</h1>,
-      },
-      {
-        category: "MEN",
-        path: "/Men",
-        element: <h1>Men</h1>,
-      },
-      {
-        category: "WOMEN",
-        path: "/Women",
-        element: <Women/>,
-      },
-      {
-        category: "KIDS",
-        path: "/Kids",
-        element: <h1>Kids</h1>,
-      },
-      {
-        category: "SALE",
-        path: "/Sale",
-        element: <h1>Sale</h1>,
-      },
+     {
+        path: "/:category",
+        element: <Category/>
+      }
     ],
   },
 ]);

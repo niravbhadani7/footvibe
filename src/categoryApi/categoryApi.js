@@ -24,7 +24,7 @@ import cardImg21 from "../assets/image/cardshoes (21).webp";
 const categoryApi = [
   {
     category: "WOMEN",
-    path: "/Women",
+    path: "Women",
     product: [
       {
         image: cardImg1,

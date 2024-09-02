@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import Women from "../../components/women";
 
 const Category = () => {
     const { category } = useParams();
@@ -6,19 +7,19 @@ const Category = () => {
     let content;
 
     switch (category) {
-        case "WOMEN": 
-            content = <h1>WOMEN</h1>;
+        case "Women": 
+            content = <Women/>;
             break;
-        case "MEN":
+        case "Men":
             content = <h1>MEN</h1>;
             break;
-        case "KIDS":
+        case "Kids":
             content = <h1>KIDS</h1>;
             break;
-        case "COLLECTION":
+        case "Collections":
             content = <h1>COLLECTION</h1>;
             break;
-        case "SALE":
+        case "Sale":
             content = <h1>SALE</h1>;
             break;
         default:
