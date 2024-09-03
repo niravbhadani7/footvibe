@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import Women from "../../components/women";
+import Men from "../../components/men";
 
 const Category = () => {
     const { category } = useParams();
@@ -11,7 +12,7 @@ const Category = () => {
             content = <Women/>;
             break;
         case "Men":
-            content = <h1>MEN</h1>;
+            content = <Men/>;
             break;
         case "Kids":
             content = <h1>KIDS</h1>;

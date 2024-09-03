@@ -1,6 +1,6 @@
 @import "../../styles/index.scss";
 
-.womens-main {
+.mens-main {
   @media (max-width: 900px) {
     margin-top: 30px;
   }
@@ -9,12 +9,12 @@
   }
   margin-top: 40px;
   .container {
-    .women-search-main {
+    .men-search-main {
       position: relative;
       display: flex;
       justify-content: center;
       // z-index: -1;
-      .women-search-input {
+      .men-search-input {
         @media (max-width: 900px) {
           padding: 10px 30px 10px 10PX;
         }
@@ -29,7 +29,7 @@
         font-size: 16px;
         font-weight: 500;
       }
-      .women-search-icon {
+      .men-search-icon {
         @media (max-width: 900px) {
           left: 72%;
         }
@@ -51,7 +51,7 @@
         cursor: pointer;
       }
     }
-    .women-card-main {
+    .men-card-main {
       @media (max-width: 900px) {
         margin-top: 30px;
         grid-template-columns: repeat(3, 1fr);

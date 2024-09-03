@@ -20,6 +20,27 @@ import cardImg18 from "../assets/image/cardshoes (18).webp";
 import cardImg19 from "../assets/image/cardshoes (19).webp";
 import cardImg20 from "../assets/image/cardshoes (20).webp";
 import cardImg21 from "../assets/image/cardshoes (21).webp";
+import menCard1 from '../assets/image/menshoes (1).webp';
+import menCard2 from '../assets/image/menshoes (2).webp';
+import menCard3 from '../assets/image/menshoes (3).webp';
+import menCard4 from '../assets/image/menshoes (4).webp';
+import menCard5 from '../assets/image/menshoes (5).webp';
+import menCard6 from '../assets/image/menshoes (6).webp';
+import menCard7 from '../assets/image/menshoes (7).webp';
+import menCard8 from '../assets/image/menshoes (8).webp';
+import menCard9 from '../assets/image/menshoes (9).webp';
+import menCard10 from '../assets/image/menshoes (10).webp';
+import menCard11 from '../assets/image/menshoes (11).webp';
+import menCard12 from '../assets/image/menshoes (12).webp';
+import menCard13 from '../assets/image/menshoes (13).webp';
+import menCard14 from '../assets/image/menshoes (14).webp';
+import menCard15 from '../assets/image/menshoes (15).webp';
+import menCard16 from '../assets/image/menshoes (16).webp';
+import menCard17 from '../assets/image/menshoes (17).webp';
+import menCard18 from '../assets/image/menshoes (18).webp';
+import menCard19 from '../assets/image/menshoes (19).webp';
+import menCard20 from '../assets/image/menshoes (20).webp';
+import menCard21 from '../assets/image/menshoes (21).webp';
 
 const categoryApi = [
   {
@@ -241,7 +262,216 @@ const categoryApi = [
   {
     category: "MEN",
     path: "/Men",
-    product: [],
+    product: [ {
+        image: menCard12,
+        name: "HUSH PUPPIES",
+        discounted_price: 49.99,
+        original_price: 99.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard11,
+        name: "HUSH PUPPIES",
+        original_price: 79.99,
+        discounted_price: 39.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard10,
+        name: "POWER",
+        original_price: 129.99,
+        discounted_price: 65.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard9,
+        name: "Loafer",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard8,
+        name: "BATA",
+        original_price: 39.99,
+        discounted_price: 19.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard7,
+        name: "HUSH PUPPIES",
+        original_price: 99.99,
+        discounted_price: 49.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard6,
+        name: "BATA",
+        original_price: 119.99,
+        discounted_price: 60.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard5,
+        name: "POWER",
+        original_price: 19.99,
+        discounted_price: 10.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard4,
+        name: "HUSH PUPPIES",
+        original_price: 79.99,
+        discounted_price: 49.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard3,
+        name: "POWER",
+        original_price: 149.99,
+        discounted_price: 75.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard2,
+        name: "POWER",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard1,
+        name: "HUSH PUPPIES",
+        original_price: 79.99,
+        discounted_price: 40.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard13,
+        name: "POWER",
+        original_price: 129.99,
+        discounted_price: 65.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard14,
+        name: "BATA",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard15,
+        name: "POWER",
+        original_price: 39.99,
+        discounted_price: 19.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard16,
+        name: "BATA",
+        original_price: 99.99,
+        discounted_price: 49.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard17,
+        name: "SLIDER",
+        original_price: 119.99,
+        discounted_price: 59.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard18,
+        name: "BATA",
+        original_price: 19.99,
+        discounted_price: 9.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard19,
+        name: "SENDAL",
+        original_price: 79.99,
+        discounted_price: 39.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard20,
+        name: "HUSH PUPPIES",
+        original_price: 149.99,
+        discounted_price: 75.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },
+      {
+        image: menCard21,
+        name: "HUSH PUPPIES",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+        cart: "Add to cart",
+        wishList: MdFavoriteBorder,
+      },],
   },
   {
     category: "KIDS",
