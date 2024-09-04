@@ -49,7 +49,7 @@
                 color: #333;
             }
         }
-        button{
+        .signup-btn{
             font-size: 20px;
             width: 100%;
             padding: 10px;
@@ -58,7 +58,7 @@
             color: #fff;
             background-color: #c30001;
             cursor: pointer;
-            margin-bottom: 10px;
+            margin: 10px 0;
             &:hover{
                 background-color: #f10001;
                 transition: .5s ease-in-out;
@@ -66,3 +66,20 @@
         }
     }
 }
+
+.password-container {
+    position: relative;
+    .show-password {
+        position: absolute;
+        margin: 0;
+        cursor: pointer;
+        border: none;
+        background: none;
+        right: 5px;
+        top: 60%;
+    }
+}
+
+
+
+

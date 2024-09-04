@@ -8,7 +8,13 @@ export default function Signup() {
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  
   const handleChange = (el) => {
     const { name, value } = el.target;
     setUserInfo({ ...userInfo, [name]: value });
@@ -28,7 +34,9 @@ export default function Signup() {
     if (userInfo.email === "") {
       error.email = "Email is required";
       isValid = false;
-    }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userInfo.email)){
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(userInfo.email)
+    ) {
       error.email = "Invalid email address";
       isValid = false;
     }
@@ -36,8 +44,12 @@ export default function Signup() {
     if (userInfo.password === "") {
       error.password = "Password is required";
       isValid = false;
-    }else if(userInfo.password.length < 6){
-      error.password = "Password must be at least 6 characters";
+    } else if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/g.test(
+        userInfo.password
+      )
+    ) {
+      error.password = "Must be special character";
       isValid = false;
     }
     setErrors(error);
@@ -62,17 +74,38 @@ export default function Signup() {
           <h1>Sign up</h1>
           <label>
             Username <span>{errors.username}</span>
-            <input type="text" name="username" onChange={handleChange} value={userInfo.username}/>
+            <input
+              type="text"
+              name="username"
+              onChange={handleChange}
+              value={userInfo.username}
+            />
           </label>
           <label>
             Email <span>{errors.email}</span>
-            <input type="email" name="email" onChange={handleChange} value={userInfo.email}/>
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={userInfo.email}
+            />
           </label>
-          <label>
-            Password <span>{errors.password}</span>
-            <input type="password" name="password" onChange={handleChange} value={userInfo.password}/>
-          </label>
-          <button onClick={handleSubmit}>Sign up</button>
+          <div className="password-container">
+            <label>
+              Password <span>{errors.password}</span>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                value={userInfo.password}
+                onChange={handleChange}
+                // placeholder="Enter your password"
+              />
+            </label>
+            <button className="show-password" type="button" onClick={togglePasswordVisibility}>  
+              {showPassword ? "🙈" : "👁️" }
+            </button>
+          </div>
+          <button className="signup-btn" onClick={handleSubmit}>Sign up</button>
           <p>
             Already have an account? <Link to="/login">Login</Link>
           </p>
