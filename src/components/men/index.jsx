@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import "./men.scss";
 import categoryApi from "../../categoryApi/categoryApi";
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch } from "react-icons/bs";
 
 function Men() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filteredProducts, setFilteredProducts] = useState(categoryApi[1].product); // Initial state set to all products
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState(
+    categoryApi[1].product
+  ); // Initial state set to all products
 
   const handleSearch = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
 
     // Filter products based on search term
-    const filtered = categoryApi[1].product.filter(product =>
-      product.name && product.name.toUpperCase().includes(term.toUpperCase())
+    const filtered = categoryApi[1].product.filter(
+      (product) =>
+        product.name && product.name.toUpperCase().includes(term.toUpperCase())
     );
     setFilteredProducts(filtered); // Update the state with filtered products
   };
@@ -22,14 +25,18 @@ function Men() {
     <div className="mens-main">
       <div className="container">
         <div className="men-search-main">
-          <input
-            type="text"
-            placeholder="Search"
-            className="search-input"
-            value={searchTerm}
-            onChange={handleSearch} // Updates searchTerm and filtered products
-          />
-          <BsSearch className="men-search-icon" />
+          <div className="men-search">
+            <input
+              type="text"
+              placeholder="Search"
+              className="search-input"
+              value={searchTerm}
+              onChange={handleSearch} // Updates searchTerm and filtered products
+            />
+            <p className="men-search-icon">
+              <BsSearch />
+            </p>
+          </div>
         </div>
         <div className="men-card-main">
           {filteredProducts.map((item) => (

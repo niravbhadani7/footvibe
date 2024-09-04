@@ -10,45 +10,58 @@
   margin-top: 40px;
   .container {
     .women-search-main {
-      position: relative;
       display: flex;
       justify-content: center;
-      // z-index: -1;
-      .search-input {
+      .women-search {
         @media (max-width: 900px) {
-          padding: 10px 30px 10px 10PX;
+          width: 70%;
         }
         @media (max-width: 500px) {
-          padding: 8px 30px 8px 10PX;
-        }
-        width: 50%;
-        padding: 10px 30px 10px 20px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        outline: none;
-        font-size: 16px;
-        font-weight: 500;
-      }
-      .women-search-icon {
-        @media (max-width: 900px) {
-          left: 72%;
-        }
-        @media (max-width: 768px) {
-          left: 71%;
-        }
-        @media (max-width: 600px) {
-          left: 70%;
-        }
-        @media (max-width: 500px) {
-          left: 69%;
+          width: 80%;
         }
         @media (max-width: 400px) {
-          left: 68%;
+          width: 100%;
         }
-        position: absolute;
-        left: 73%;
-        top: 10px;
-        cursor: pointer;
+        border: 1px solid #000;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 40%;
+        padding: 0 10px;
+        .search-input {
+          @media (max-width: 900px) {
+            padding: 10px 10px 10px 10px;
+          }
+          @media (max-width: 500px) {
+            padding: 8px 10px 8px 10px;
+          }
+          padding: 10px 10px 10px 10px;
+          background-color: transparent;
+          border: 0px;
+          border-radius: 10px;
+          outline: none;
+          font-size: 16px;
+          font-weight: 500;
+        }
+        .women-search-icon {
+          @media (max-width: 900px) {
+            left: 72%;
+          }
+          @media (max-width: 768px) {
+            left: 71%;
+          }
+          @media (max-width: 600px) {
+            left: 70%;
+          }
+          @media (max-width: 500px) {
+            left: 69%;
+          }
+          @media (max-width: 400px) {
+            left: 68%;
+          }
+          cursor: pointer;
+        }
       }
     }
     .women-card-main {
