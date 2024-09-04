@@ -20,12 +20,14 @@ function Header() {
     document.body.style.overflowY = "hidden";
     // .slideroffer
     document.querySelector(".slideroffer").style.zIndex = "-1";
+    document.querySelector(".search-input").style.zIndex = "-1";
   };
 
   const closeNav = () => {
     setIsNavOpen(false);
     document.body.style.overflowY = "auto";
     document.querySelector(".slideroffer").style.zIndex = "0";
+    document.querySelector(".search-input").style.zIndex = "0";
   };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);

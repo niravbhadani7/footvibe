@@ -25,7 +25,7 @@ function Women() {
           <input
             type="text"
             placeholder="Search"
-            className="women-search-input"
+            className="search-input"
             value={searchTerm}
             onChange={handleSearch} // Updates searchTerm and filtered products
           />
