@@ -20,16 +20,12 @@ function Header() {
     document.body.style.overflowY = "hidden";
     // .slideroffer
     document.querySelector(".slideroffer").style.zIndex = "-1";
-    document.querySelector(".men-search-main").style.zIndex = "-1";
-    document.querySelector(".women-search-main").style.zIndex = "-1";
   };
 
   const closeNav = () => {
     setIsNavOpen(false);
     document.body.style.overflowY = "auto";
     document.querySelector(".slideroffer").style.zIndex = "0";
-    document.querySelector(".men-search-main").style.zIndex = "0";
-    document.querySelector(".women-search-main").style.zIndex = "0";
   };
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -66,7 +62,7 @@ function Header() {
         <Link className="menu-item" to={"/shop"} onClick={closeNav}>
           Shop
         </Link>
-        <Link className="menu-item" to={"/profile"} onClick={closeNav}>
+        <Link className="menu-item" to={"/signup"} onClick={closeNav} >
           Profile{" "}
         </Link>
       </div>
@@ -98,7 +94,7 @@ function Header() {
                 <div className="header-cart-count">0</div>
               </div>
               <div className="header-login">
-                <Link to={"/login"}>
+                <Link to={"/signup"}>
                   <CgProfile className="profile-icon" />
                   <p>Profile</p>
                 </Link>
