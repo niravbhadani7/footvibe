@@ -3,17 +3,25 @@ import DefaultLayout from "./defaultLayout/defaultLayout";
 import Home from "../components/home";
 import Signup from "../components/form/signup";
 import Login from "../components/form/login";
-import Women from "../components/women";
 import Category from "./category/category";
+import DelaySuspense from "../common/loader/delaySuspense/delaySuspense";
 
 const router = createBrowserRouter([
   {
     path: "/signup",
-    element: <Signup/>
+    element: (
+      <DelaySuspense>
+        <Signup />
+      </DelaySuspense>
+    ),
   },
   {
     path: "/login",
-    element: <Login/>
+    element: (
+      <DelaySuspense>
+        <Login />,
+      </DelaySuspense>
+    ),
   },
   {
     path: "/",
@@ -21,12 +29,16 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <DelaySuspense>
+            <Home />,
+          </DelaySuspense>
+        ),
       },
-     {
+      {
         path: "/:category",
-        element: <Category/>
-      }
+        element: <Category />,
+      },
     ],
   },
 ]);
