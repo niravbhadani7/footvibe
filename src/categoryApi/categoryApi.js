@@ -20,27 +20,27 @@ import cardImg18 from "../assets/image/cardshoes (18).webp";
 import cardImg19 from "../assets/image/cardshoes (19).webp";
 import cardImg20 from "../assets/image/cardshoes (20).webp";
 import cardImg21 from "../assets/image/cardshoes (21).webp";
-import menCard1 from '../assets/image/menshoes (1).webp';
-import menCard2 from '../assets/image/menshoes (2).webp';
-import menCard3 from '../assets/image/menshoes (3).webp';
-import menCard4 from '../assets/image/menshoes (4).webp';
-import menCard5 from '../assets/image/menshoes (5).webp';
-import menCard6 from '../assets/image/menshoes (6).webp';
-import menCard7 from '../assets/image/menshoes (7).webp';
-import menCard8 from '../assets/image/menshoes (8).webp';
-import menCard9 from '../assets/image/menshoes (9).webp';
-import menCard10 from '../assets/image/menshoes (10).webp';
-import menCard11 from '../assets/image/menshoes (11).webp';
-import menCard12 from '../assets/image/menshoes (12).webp';
-import menCard13 from '../assets/image/menshoes (13).webp';
-import menCard14 from '../assets/image/menshoes (14).webp';
-import menCard15 from '../assets/image/menshoes (15).webp';
-import menCard16 from '../assets/image/menshoes (16).webp';
-import menCard17 from '../assets/image/menshoes (17).webp';
-import menCard18 from '../assets/image/menshoes (18).webp';
-import menCard19 from '../assets/image/menshoes (19).webp';
-import menCard20 from '../assets/image/menshoes (20).webp';
-import menCard21 from '../assets/image/menshoes (21).webp';
+import menCard1 from "../assets/image/menshoes (1).webp";
+import menCard2 from "../assets/image/menshoes (2).webp";
+import menCard3 from "../assets/image/menshoes (3).webp";
+import menCard4 from "../assets/image/menshoes (4).webp";
+import menCard5 from "../assets/image/menshoes (5).webp";
+import menCard6 from "../assets/image/menshoes (6).webp";
+import menCard7 from "../assets/image/menshoes (7).webp";
+import menCard8 from "../assets/image/menshoes (8).webp";
+import menCard9 from "../assets/image/menshoes (9).webp";
+import menCard10 from "../assets/image/menshoes (10).webp";
+import menCard11 from "../assets/image/menshoes (11).webp";
+import menCard12 from "../assets/image/menshoes (12).webp";
+import menCard13 from "../assets/image/menshoes (13).webp";
+import menCard14 from "../assets/image/menshoes (14).webp";
+import menCard15 from "../assets/image/menshoes (15).webp";
+import menCard16 from "../assets/image/menshoes (16).webp";
+import menCard17 from "../assets/image/menshoes (17).webp";
+import menCard18 from "../assets/image/menshoes (18).webp";
+import menCard19 from "../assets/image/menshoes (19).webp";
+import menCard20 from "../assets/image/menshoes (20).webp";
+import menCard21 from "../assets/image/menshoes (21).webp";
 
 const categoryApi = [
   {
@@ -48,6 +48,7 @@ const categoryApi = [
     path: "Women",
     product: [
       {
+        id: 1,
         image: cardImg1,
         name: "Elegant Heels",
         discounted_price: 49.99,
@@ -56,213 +57,465 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Step into sophistication with our Elegant Heels. Designed with a sleek silhouette and premium materials, these heels offer both comfort and style for any formal occasion.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 2,
         image: cardImg2,
         name: "Sneaker A",
-        original_price: 79.99,
         discounted_price: 39.99,
+        original_price: 79.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Sneaker A combines modern design with comfort. Perfect for casual outings or workouts, these sneakers feature a lightweight build and cushioned sole for all-day wear.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 3,
         image: cardImg3,
         name: "Boot B",
-        original_price: 129.99,
         discounted_price: 65.99,
+        original_price: 129.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Embrace rugged style with Boot B. These durable boots are crafted for both fashion and function, with a sturdy sole and classic design that complements any outfit.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 4,
         image: cardImg4,
         name: "Loafer C",
-        original_price: 89.99,
         discounted_price: 45.99,
+        original_price: 89.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Loafer C offers a refined look with its timeless design. Ideal for professional or casual settings, these loafers provide both comfort and elegance.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 5,
         image: cardImg5,
         name: "Sandal D",
-        original_price: 39.99,
         discounted_price: 19.99,
+        original_price: 39.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Sandal D is your go-to for warm weather. Featuring a breezy design and comfortable fit, these sandals are perfect for relaxed days out.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 6,
         image: cardImg6,
         name: "Running Shoe E",
-        original_price: 99.99,
         discounted_price: 49.99,
+        original_price: 99.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Enhance your performance with Running Shoe E. Designed for athletes and fitness enthusiasts, these shoes provide excellent support and cushioning for your runs.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 7,
         image: cardImg7,
         name: "Dress Shoe F",
-        original_price: 119.99,
         discounted_price: 60.99,
+        original_price: 119.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Dress Shoe F adds a touch of class to any formal outfit. Crafted with high-quality materials, these shoes offer both style and comfort for special occasions.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 8,
         image: cardImg8,
         name: "Flip Flop G",
-        original_price: 19.99,
         discounted_price: 10.99,
+        original_price: 19.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Flip Flop G is the ultimate choice for casual comfort. Perfect for beach days or lounging around, these flip flops are both stylish and easy to wear.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 9,
         image: cardImg9,
         name: "Casual Shoe H",
-        original_price: 79.99,
         discounted_price: 49.99,
+        original_price: 79.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Casual Shoe H provides a laid-back yet trendy look. Ideal for everyday wear, these shoes offer a comfortable fit and modern design.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 10,
         image: cardImg10,
         name: "Basketball Shoe I",
-        original_price: 149.99,
         discounted_price: 75.99,
+        original_price: 149.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Basketball Shoe I is designed for peak performance on the court. With enhanced grip and support, these shoes help you make every play count.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 11,
         image: cardImg11,
         name: "Skate Shoe J",
-        original_price: 89.99,
         discounted_price: 45.99,
+        original_price: 89.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Skate Shoe J combines durability and style for skaters. Featuring a reinforced build and comfortable fit, these shoes are perfect for tricks and everyday wear.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 12,
         image: cardImg12,
-        name: "Sneaker K",
-        original_price: 79.99,
-        discounted_price: 40.99,
+        name: "Hiking Boot K",
+        discounted_price: 85.99,
+        original_price: 169.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Hiking Boot K offers the ultimate support for your outdoor adventures. Designed with a rugged sole and weather-resistant materials, these boots are built to last.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 13,
         image: cardImg13,
-        name: "Boot L",
-        original_price: 129.99,
-        discounted_price: 65.99,
+        name: "Winter Boot L",
+        discounted_price: 89.99,
+        original_price: 179.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Winter Boot L keeps your feet warm and dry in harsh conditions. With its insulated lining and durable exterior, these boots are perfect for cold-weather wear.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
       {
+        id: 14,
         image: cardImg14,
-        name: "Loafer M",
-        original_price: 89.99,
-        discounted_price: 45.99,
+        name: "Slip-On M",
+        discounted_price: 29.99,
+        original_price: 59.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Slip-On M combines comfort and convenience with its easy-to-wear design. Ideal for casual outings, these slip-ons provide a snug fit and modern aesthetic.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Flexible fabric upper",
+          "Cushioned insole",
+          "Durable rubber outsole",
+        ],
       },
       {
+        id: 15,
         image: cardImg15,
-        name: "Sandal N",
-        original_price: 39.99,
-        discounted_price: 19.99,
+        name: "Climbing Shoe N",
+        discounted_price: 99.99,
+        original_price: 199.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Climbing Shoe N offers superior grip and control for rock climbing enthusiasts. Designed with a close fit and durable materials, these shoes provide unmatched precision.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Rubber sole for optimal grip",
+          "Reinforced toe for added durability",
+          "Breathable design",
+        ],
       },
       {
+        id: 16,
         image: cardImg16,
-        name: "Running Shoe O",
-        original_price: 99.99,
-        discounted_price: 49.99,
+        name: "Cycling Shoe O",
+        discounted_price: 79.99,
+        original_price: 159.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Cycling Shoe O is built for performance on the bike. With an ergonomic design and stiff sole, these shoes ensure maximum power transfer and comfort during long rides.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Reinforced sole for stiffness",
+          "Breathable upper material",
+          "Secure fit with adjustable straps",
+        ],
       },
       {
+        id: 17,
         image: cardImg17,
-        name: "Dress Shoe P",
-        original_price: 119.99,
-        discounted_price: 59.99,
+        name: "Espadrille P",
+        discounted_price: 25.99,
+        original_price: 51.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Espadrille P offers a chic and relaxed vibe with its woven design. Perfect for warm days, these shoes provide a breathable, stylish option for casual wear.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Woven upper material",
+          "Flexible sole for comfort",
+          "Easy slip-on design",
+        ],
       },
       {
+        id: 18,
         image: cardImg18,
-        name: "Flip Flop Q",
-        original_price: 19.99,
-        discounted_price: 9.99,
+        name: "Chelsea Boot Q",
+        discounted_price: 85.99,
+        original_price: 170.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Chelsea Boot Q brings timeless elegance to your wardrobe. With its smooth leather finish and snug fit, this boot is the ideal choice for both casual and formal occasions.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Premium leather upper",
+          "Slip-on design with elastic sides",
+          "Durable outsole for longevity",
+        ],
       },
       {
+        id: 19,
         image: cardImg19,
-        name: "Casual Shoe R",
-        original_price: 79.99,
-        discounted_price: 39.99,
+        name: "Combat Boot R",
+        discounted_price: 90.99,
+        original_price: 180.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Tough and stylish, Combat Boot R offers a rugged design with a fashionable edge. These boots are built to withstand harsh conditions while maintaining a striking appearance.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Full-grain leather",
+          "Heavy-duty rubber sole",
+          "Reinforced toe cap",
+        ],
       },
       {
+        id: 20,
         image: cardImg20,
-        name: "Basketball Shoe S",
-        original_price: 149.99,
-        discounted_price: 75.99,
+        name: "Platform Shoe S",
+        discounted_price: 55.99,
+        original_price: 111.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Elevate your style with Platform Shoe S. With a bold platform design, these shoes add height and confidence to any look while ensuring comfort.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Thick platform sole",
+          "Cushioned insole for comfort",
+          "Durable rubber outsole",
+        ],
       },
       {
+        id: 21,
         image: cardImg21,
         name: "Skate Shoe T",
-        original_price: 89.99,
         discounted_price: 45.99,
+        original_price: 89.99,
         offer: "50 % OFF",
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        description:
+          "Skate Shoe T is built for skaters who demand durability and style. With its reinforced structure and comfortable fit, these shoes are perfect for skating and casual wear.",
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ],
       },
     ],
   },
   {
     category: "MEN",
     path: "/Men",
-    product: [ {
+    product: [
+      {
         image: menCard12,
         name: "HUSH PUPPIES",
         discounted_price: 49.99,
@@ -471,7 +724,8 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
-      },],
+      },
+    ],
   },
   {
     category: "KIDS",

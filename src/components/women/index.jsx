@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "./women.scss";
 import categoryApi from "../../categoryApi/categoryApi";
 import { BsSearch } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-function Women() {
+function Women({setId}) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(
     categoryApi[0].product
@@ -19,6 +20,10 @@ function Women() {
         product.name && product.name.toUpperCase().includes(term.toUpperCase())
     );
     setFilteredProducts(filtered); // Update the state with filtered products
+  };
+
+  const openDetails = (i) => {
+    localStorage.setItem("id", i);
   };
 
   return (
@@ -38,9 +43,9 @@ function Women() {
         </div>
         <div className="women-card-main">
           {filteredProducts.map((item) => (
-            <div className="shoes-card" key={item.id}>
+            <Link to={`/product`} onClick={() => openDetails(item.id)}   className="shoes-card" key={item.id}>
               <div className="shoes-image">
-                <img src={item.image} alt={item.name} />
+                  <img src={item.image} alt={item.name} />
               </div>
               <div className="shoes-details">
                 <h3 className="shoes-name">{item.name}</h3>
@@ -59,7 +64,7 @@ function Women() {
                   <item.wishList className="fav-icon" />
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

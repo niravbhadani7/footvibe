@@ -12,9 +12,9 @@ const Category = () => {
     case "Women":
       content = (
         <DelaySuspense>
-          <Women />;
+          <Women/>;
         </DelaySuspense>
-      );
+      ) 
       break;
     case "Men":
       content = (
@@ -33,7 +33,7 @@ const Category = () => {
       content = <h1>SALE</h1>;
       break;
     default:
-      content = <h1>HOME</h1>;
+      content = <h1>category not found</h1>;
       break;
   }
 

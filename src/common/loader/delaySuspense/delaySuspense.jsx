@@ -48,7 +48,7 @@ const DelaySuspense = ({ children }) => {
         setIsLoaded(true);
     };
     if (!isLoaded) {
-        setTimeout(handleLoad, 2000);
+        setTimeout(handleLoad, 3100);
     }
 
     return isLoaded ? children : <Loader />;
