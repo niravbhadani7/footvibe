@@ -1,6 +1,9 @@
 @import '../../styles/index.scss';
 
 .product-page {
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
     display: flex;
     padding: 20px;
     max-width: 1200px;
@@ -11,6 +14,9 @@
   
   .gallery {
     flex: 1;
+    @media (max-width: 400px) {
+      margin-bottom: 20px;
+    }
   
     .main-image {
       img {
@@ -40,6 +46,10 @@
   }
   
   .product-info {
+    @media (max-width: 400px) {
+      margin:0;
+    }
+
     flex: 1;
     margin-left: 40px;
   
