@@ -1,7 +1,7 @@
 @import '../../styles/index.scss';
 
 .product-page {
-  @media (max-width: 400px) {
+  @media (max-width: 576px) {
     flex-direction: column;
   }
     display: flex;
@@ -14,7 +14,7 @@
   
   .gallery {
     flex: 1;
-    @media (max-width: 400px) {
+    @media (max-width: 576px) {
       margin-bottom: 20px;
     }
   
@@ -46,7 +46,7 @@
   }
   
   .product-info {
-    @media (max-width: 400px) {
+    @media (max-width: 576px) {
       margin:0;
     }
 
