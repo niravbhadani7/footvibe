@@ -28,11 +28,11 @@ const id = JSON.parse(localStorage.getItem("id"))
             <div className="main-image">
               <img src={item.image} alt={item.name} />
             </div>
-            {/* <div className="thumbnail-images">
+            <div className="thumbnail-images">
           <img src={Shoes1} alt="Shoe Thumbnail 1" />
           <img src={Shoes2} alt="Shoe Thumbnail 2" />
           <img src={Shoes3} alt="Shoe Thumbnail 3" />
-        </div> */}
+        </div>
           </div>
           {/* Product Info Section */}
           <div className="product-info">
