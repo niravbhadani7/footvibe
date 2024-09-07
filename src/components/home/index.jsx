@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div>
         <Herobanner/>
-        <Item/>
         <Slideroffer/>
+        <Item/>
         
     </div>
   )

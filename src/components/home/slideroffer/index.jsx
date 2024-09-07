@@ -9,36 +9,17 @@ import Slider5 from "../../../assets/image/slider (5).webp";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 
-
-function SampleNextArrow(props) {
-  const {onClick } = props;
-  return (
-    <div
-      className="arrow arrow-right"
-      onClick={onClick}
-    ><FaArrowRight style={{color:"white", display:"block"}} className="right-icon"/></div>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const {onClick} = props;
-  return (
-    <div
-      className="arrow arrow-left"
-      onClick={onClick}
-    ><FaArrowLeft style={{color:"white", display:"block"}} className="left-icon"/></div>
-  );
-}
 function Slideroffer() {
 
   var settings = {
-    dots: true,
+    fade: true,
     infinite: true,
-    cssEase: "ease-in-out",
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    waitForAnimate: false
   };
   return (
     <Slider {...settings} className="slideroffer">
