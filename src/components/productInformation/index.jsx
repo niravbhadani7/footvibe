@@ -4,7 +4,9 @@ import Shoes1 from "../../assets/image/cardshoes (1).webp";
 import Shoes2 from "../../assets/image/cardshoes (2).webp";
 import Shoes3 from "../../assets/image/cardshoes (3).webp";
 import "./productInformation.scss";
+import { IoMdArrowBack } from "react-icons/io";
 import categoryApi from "../../categoryApi/categoryApi";
+import toast from "react-hot-toast";
 
 function ProductInfo() {
   const [activeTab, setActiveTab] = useState("details");
@@ -13,14 +15,32 @@ function ProductInfo() {
     setActiveTab(tab);
   };
 
-
-const id = JSON.parse(localStorage.getItem("id"))
+  const id = JSON.parse(localStorage.getItem("id"));
 
   const category = categoryApi[0].product;
- const data = category.filter((item) => item.id === id);
- console.log(id);
+  const data = category.filter((item) => item.id === id);
+
+  const backButton = () => {
+    window.history.back();
+  };
+
+  const addToCart = (i) => {
+    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    if (cartData.find((el) => el === i)) {
+      toast.error("Item already in cart");
+    } else {
+      cartData.push(i);
+      localStorage.setItem("cartData", JSON.stringify(cartData));
+      toast.success("Item added to cart");
+      window.location.reload();
+    }
+  };
+
   return (
     <div>
+      <div className="back-btn">
+        <IoMdArrowBack onClick={backButton} />
+      </div>
       {data.map((item, i) => (
         <div key={i} className="product-page">
           {/* Product Gallery Section */}
@@ -29,10 +49,10 @@ const id = JSON.parse(localStorage.getItem("id"))
               <img src={item.image} alt={item.name} />
             </div>
             <div className="thumbnail-images">
-          <img src={Shoes1} alt="Shoe Thumbnail 1" />
+              {/* <img src={Shoes1} alt="Shoe Thumbnail 1" />
           <img src={Shoes2} alt="Shoe Thumbnail 2" />
-          <img src={Shoes3} alt="Shoe Thumbnail 3" />
-        </div>
+          <img src={Shoes3} alt="Shoe Thumbnail 3" /> */}
+            </div>
           </div>
           {/* Product Info Section */}
           <div className="product-info">
@@ -54,7 +74,9 @@ const id = JSON.parse(localStorage.getItem("id"))
             </div>
 
             {/* Add to Cart Button */}
-            <button className="add-to-cart">{item.cart}</button>
+            <button className="add-to-cart" onClick={() => addToCart(item.id)}>
+              {item.cart}
+            </button>
 
             {/* Product Details and Reviews Tabs */}
             <div className="tab-container">

@@ -6,8 +6,17 @@ import Login from "../components/form/login";
 import Category from "./category/category";
 import DelaySuspense from "../common/loader/delaySuspense/delaySuspense";
 import ProductInfo from "../components/productInformation"; // Ensure this is imported
+import Cart from "../common/cart";
 
 const router = createBrowserRouter([
+    {
+      path: "/cart",
+      element: (
+        <DelaySuspense>
+          <Cart />
+        </DelaySuspense>
+      ),
+    },
     {
       path: "/signup",
       element: (
@@ -27,9 +36,9 @@ const router = createBrowserRouter([
     {
       path: "/product",
       element: (
-        <DelaySuspense>
+        // <DelaySuspense>
           <ProductInfo/>
-        </DelaySuspense>
+        // </DelaySuspense>
       ),
     },
     {

@@ -11,9 +11,9 @@ const Category = () => {
   switch (category) {
     case "Women":
       content = (
-        <DelaySuspense>
-          <Women/>;
-        </DelaySuspense>
+        // <DelaySuspense>
+          <Women/>
+        // </DelaySuspense>
       ) 
       break;
     case "Men":

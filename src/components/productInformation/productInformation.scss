@@ -1,5 +1,10 @@
 @import '../../styles/index.scss';
 
+.back-btn{
+  margin: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
 .product-page {
   @media (max-width: 576px) {
     flex-direction: column;

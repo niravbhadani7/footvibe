@@ -123,6 +123,7 @@
 
             .shoes-price {
               font-size: 22px;
+              color: var(--theme-black-text);
             }
             del {
               font-size: 13px;
@@ -162,6 +163,7 @@
             .fav-icon {
               font-size: 27px;
               cursor: pointer;
+              color: var(--theme-black-border);
             }
             .add-to-cart-btn {
               background-color: #e74c3c;
@@ -178,6 +180,9 @@
             }
           }
         }
+      }span{
+        font-size: 30px;
+        font-weight: 600;
       }
     }
   }

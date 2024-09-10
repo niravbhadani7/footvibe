@@ -34,6 +34,8 @@ function Header() {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const cartCount = JSON.parse(localStorage.getItem("cartData")) || [];
+
   return (
     <header>
       <div className={`sidenav ${isNavOpen ? "open" : ""}`}>
@@ -88,11 +90,11 @@ function Header() {
                 <MdFavoriteBorder className="fav-icon" />
                 <p>Wishlist</p>
               </div>
-              <div className="header-cart">
+              <Link to={"/cart"} className="header-cart">
                 <IoCartOutline className="bag-icon" />
                 <p>Store</p>
-                <div className="header-cart-count">0</div>
-              </div>
+                <div className="header-cart-count">{cartCount.length}</div>
+              </Link>
               <div className="header-login">
                 <Link to={"/signup"}>
                   <CgProfile className="profile-icon" />
