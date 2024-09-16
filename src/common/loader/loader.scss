@@ -1,71 +1,40 @@
-.loader {
-    width: 100%;
-    height: 100vh;
+.spinner-main{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
-
-    .logo-container {
-        width: 150px;
-        height: 150px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        animation: walking-shoes 2s infinite ease-in-out;
-
-        @media (max-width: 768px) {
-            width: 100px;
-            height: 100px;
+    align-items: center;
+    height: 80vh;
+    .spinner {
+        width: 80px;
+        height: 80px;
+        display: grid;
+        border-radius: 50%;
+        -webkit-mask: radial-gradient(farthest-side, #0000 40%, #000000 41%);
+        background: 
+          linear-gradient(0deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 1) 0) center/4.5px 100%,
+          linear-gradient(90deg, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.75) 0) center/100% 4.5px;
+        background-repeat: no-repeat;
+        animation: spinner-d3o0rx 1s infinite steps(12);
+        
+        &::before,
+        &::after {
+          content: "";
+          grid-area: 1/1;
+          border-radius: 50%;
+          background: inherit;
+          opacity: 0.915;
+          transform: rotate(30deg);
         }
-
-        @media (max-width: 425px) {
-            width: 80px;
-            height: 80px;
+        
+        &::after {
+          opacity: 0.83;
+          transform: rotate(60deg);
         }
-
-        .logo {
-            width: 100px;
-            height: auto;
-            object-fit: cover;
-
-            @media (max-width: 768px) {
-                width: 80px;
-            }
-
-            @media (max-width: 425px) {
-                width: 60px;
-            }
+      }
+      
+      @keyframes spinner-d3o0rx {
+        100% {
+          transform: rotate(1turn);
         }
-
-        &.shoes-walking {
-            animation: walking-shoes 3s forwards;
-        }
-
-        @keyframes walking-shoes {
-            0%, 100% {
-                transform: translateY(0) scale(1);
-            }
-
-            25% {
-                transform: translateY(-20px) scale(1.05);
-            }
-
-            50% {
-                transform: translateX(10px) translateY(0) scale(1.1);
-            }
-
-            75% {
-                transform: translateY(-20px) scale(1.05);
-            }
-
-            /* Move to the right and disappear */
-            100% {
-                transform: translateX(150vw) translateY(0) scale(1);
-                opacity: 0.6;
-            }
-        }
-    }
+      }
 }
+  

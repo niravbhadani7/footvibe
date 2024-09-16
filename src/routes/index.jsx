@@ -9,56 +9,40 @@ import ProductInfo from "../components/productInformation"; // Ensure this is im
 import Cart from "../common/cart";
 
 const router = createBrowserRouter([
-    {
-      path: "/cart",
-      element: (
-        <DelaySuspense>
-          <Cart />
-        </DelaySuspense>
-      ),
-    },
-    {
-      path: "/signup",
-      element: (
-        <DelaySuspense>
-          <Signup />
-        </DelaySuspense>
-      ),
-    },
-    {
-      path: "/login",
-      element: (
-        <DelaySuspense>
-          <Login />
-        </DelaySuspense>
-      ),
-    },
-    {
-      path: "/product",
-      element: (
-        // <DelaySuspense>
-          <ProductInfo/>
-        // </DelaySuspense>
-      ),
-    },
-    {
-      path: "/",
-      element: <DefaultLayout />,
-      children: [
-        {
-          path: "/",
-          element: (
-            <DelaySuspense>
-              <Home />
-            </DelaySuspense>
-          ),
-        },
-        {
-          path: "/:category",
-          element: <Category/>,
-        },
-      ],
-    },
-  ]);
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/product",
+    element: <ProductInfo />,
+  },
+  {
+    path: "/",
+    element: <DefaultLayout />,
+    children: [
+      {
+        path: "/",
+        element: (
+          <DelaySuspense>
+            <Home />
+          </DelaySuspense>
+        ),
+      },
+      {
+        path: "/:category",
+        element: <Category />,
+      },
+    ],
+  },
+]);
 
 export default router;

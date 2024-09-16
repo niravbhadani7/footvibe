@@ -49,15 +49,15 @@ function ProductInfo() {
               <img src={item.image} alt={item.name} />
             </div>
             <div className="thumbnail-images">
-              {/* <img src={Shoes1} alt="Shoe Thumbnail 1" />
+              <img src={Shoes1} alt="Shoe Thumbnail 1" />
           <img src={Shoes2} alt="Shoe Thumbnail 2" />
-          <img src={Shoes3} alt="Shoe Thumbnail 3" /> */}
+          <img src={Shoes3} alt="Shoe Thumbnail 3" />
             </div>
           </div>
           {/* Product Info Section */}
           <div className="product-info">
             <h1>{item.name}</h1>
-            <p className="price">{item.discounted_price}</p>
+            <p className="price">$ {item.discounted_price}</p>
             <p className="description">{item.description}</p>
 
             {/* Size Selection */}

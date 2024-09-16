@@ -25,8 +25,8 @@ function Cart() {
   
   const handleRemove = (id) => {
     cartData.splice(id , 1);
-    const newCartData = cartData;
-    localStorage.setItem("cartData", JSON.stringify(newCartData));
+    const newData = cartData
+    localStorage.setItem("cartData", JSON.stringify(newData));
     window.location.reload();
   };
 
@@ -40,7 +40,7 @@ function Cart() {
         <IoMdArrowBack onClick={backButton} />
       </div>
       <h1>Cart</h1>
-      {category.map((item) => (
+      {category.map((item,i) => (
         <div key={item.id} className="cart-card">
           <img src={item.image} alt="Shoe" className="cart-card-img" />
           <div className="cart-card-details">
@@ -65,7 +65,7 @@ function Cart() {
               +
             </button>
           </div>
-          <button className="remove-btn" onClick={() => handleRemove(item.id)}>Remove</button>
+          <button className="remove-btn" onClick={() => handleRemove(i)}>Remove</button>
         </div>
       ))}
     </div>
