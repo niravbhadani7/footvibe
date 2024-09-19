@@ -60,6 +60,11 @@ function Cart() {
       {cartData.map((item, i) => (
         <div key={item.id} className="product-page">
           {/* Product Gallery Section */}
+          <MdClose
+            className="remove-btn-top"
+            onClick={() => handleRemove(item.id)}
+            aria-label={`Remove ${item.name} from cart`}
+          />
           <div className="gallery">
             <div className="main-image">
               <img src={item.image} alt={item.name} />
