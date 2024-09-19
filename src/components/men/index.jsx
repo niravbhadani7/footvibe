@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./men.scss";
 import categoryApi from "../../categoryApi/categoryApi";
 import { BsSearch } from "react-icons/bs";
+import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function Men() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,6 +21,23 @@ function Men() {
         product.name && product.name.toUpperCase().includes(term.toUpperCase())
     );
     setFilteredProducts(filtered); // Update the state with filtered products
+  };
+
+  const openDetails = (i) => {
+    localStorage.setItem("id", JSON.stringify(i));
+    // sessionStorage.setItem("scrollPosition", window.pageYOffset);
+  };
+
+  const addToCart = (i) => {
+    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    if (cartData.find((el) => el === i)) {
+      toast.error("Item already in cart");
+    } else {
+      cartData.push(i);
+      localStorage.setItem("cartData", JSON.stringify(cartData));
+      toast.success("Item added to cart");
+      window.location.reload();
+    }
   };
 
   return (
@@ -41,9 +60,13 @@ function Men() {
         <div className="men-card-main">
           {filteredProducts.map((item) => (
             <div className="shoes-card" key={item.id}>
-              <div className="shoes-image">
+              <Link className="shoes-image" 
+              onClick={() => openDetails(item.id)}
+              to={`/product`}
+              key={item.id}
+              >
                 <img src={item.image} alt={item.name} />
-              </div>
+              </Link>
               <div className="shoes-details">
                 <h3 className="shoes-name">{item.name}</h3>
                 <div className="price-sec">
@@ -57,7 +80,7 @@ function Men() {
                   ))}
                 </div>
                 <div className="cart-wish">
-                  <button className="add-to-cart-btn">{item.cart}</button>
+                  <button className="add-to-cart-btn" onClick={() => addToCart(item.id)}>{item.cart}</button>
                   <item.wishList className="fav-icon" />
                 </div>
               </div>

@@ -4,11 +4,10 @@ import Logo from '../../assets/logo/logo (1).svg'
 import { IoCartOutline } from "react-icons/io5";
 import { MdFavoriteBorder } from "react-icons/md";
 import categoryApi from "../../categoryApi/categoryApi";
-import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import { IoSearchOutline } from "react-icons/io5";
 import { FaCaretDown } from "react-icons/fa";
+import { GoPerson } from "react-icons/go";
 
 const category = categoryApi;
 function Header() {
@@ -97,8 +96,8 @@ function Header() {
               </Link>
               <div className="header-login">
                 <Link to={"/signup"}>
-                  <CgProfile className="profile-icon" />
-                  <p>Profile</p>
+                  <GoPerson className="profile-icon" />
+                  <p>Login</p>
                 </Link>
               </div>
               <div onClick={openNav} className="header-menu">

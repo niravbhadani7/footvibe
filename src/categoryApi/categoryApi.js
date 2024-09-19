@@ -516,6 +516,7 @@ const categoryApi = [
     path: "/Men",
     product: [
       {
+        id : 101,
         image: menCard12,
         name: "HUSH PUPPIES",
         discounted_price: 49.99,
@@ -524,8 +525,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 102,
         image: menCard11,
         name: "HUSH PUPPIES",
         original_price: 79.99,
@@ -534,8 +545,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 103,
         image: menCard10,
         name: "POWER",
         original_price: 129.99,
@@ -544,8 +565,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 104,
         image: menCard9,
         name: "Loafer",
         original_price: 89.99,
@@ -554,8 +585,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 105,
         image: menCard8,
         name: "BATA",
         original_price: 39.99,
@@ -564,8 +605,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 106,
         image: menCard7,
         name: "HUSH PUPPIES",
         original_price: 99.99,
@@ -574,8 +625,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 107,
         image: menCard6,
         name: "BATA",
         original_price: 119.99,
@@ -584,8 +645,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 108,
         image: menCard5,
         name: "POWER",
         original_price: 19.99,
@@ -594,8 +665,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 109,
         image: menCard4,
         name: "HUSH PUPPIES",
         original_price: 79.99,
@@ -604,8 +685,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 110,
         image: menCard3,
         name: "POWER",
         original_price: 149.99,
@@ -614,8 +705,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 111,
         image: menCard2,
         name: "POWER",
         original_price: 89.99,
@@ -624,8 +725,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 112,
         image: menCard1,
         name: "HUSH PUPPIES",
         original_price: 79.99,
@@ -634,8 +745,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 113,
         image: menCard13,
         name: "POWER",
         original_price: 129.99,
@@ -644,8 +765,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 114,
         image: menCard14,
         name: "BATA",
         original_price: 89.99,
@@ -654,8 +785,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 115,
         image: menCard15,
         name: "POWER",
         original_price: 39.99,
@@ -664,8 +805,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 116,
         image: menCard16,
         name: "BATA",
         original_price: 99.99,
@@ -674,8 +825,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 117,
         image: menCard17,
         name: "SLIDER",
         original_price: 119.99,
@@ -684,8 +845,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 118,
         image: menCard18,
         name: "BATA",
         original_price: 19.99,
@@ -694,8 +865,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 119,
         image: menCard19,
         name: "SENDAL",
         original_price: 79.99,
@@ -704,8 +885,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 120,
         image: menCard20,
         name: "HUSH PUPPIES",
         original_price: 149.99,
@@ -714,8 +905,18 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
       {
+        id : 121,
         image: menCard21,
         name: "HUSH PUPPIES",
         original_price: 89.99,
@@ -724,6 +925,15 @@ const categoryApi = [
         size: ["UK 7", "UK 8", "UK 9", "UK 10"],
         cart: "Add to cart",
         wishList: MdFavoriteBorder,
+        sizeTitle: "Select Size",
+        sizeOption: "Select Your Size",
+        details: "Product Details",
+        review: "Reviews",
+        P_details: [
+          "Breathable mesh upper",
+          "Responsive foam midsole",
+          "Rubber outsole for traction",
+        ]
       },
     ],
   },

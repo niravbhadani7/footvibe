@@ -12,16 +12,13 @@ const Category = () => {
     case "Women":
       content = (
         // <DelaySuspense>
-          <Women/>
+        <Women />
         // </DelaySuspense>
-      ) 
+      );
       break;
     case "Men":
-      content = (
-        <DelaySuspense>
-          <Men />;
-        </DelaySuspense>
-      );
+      content = <Men />;
+
       break;
     case "Kids":
       content = <h1>KIDS</h1>;

@@ -75,21 +75,24 @@
       color: #666;
     }
   
-    .size-selection {
+    .shoes-size {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      gap: 10px;
       margin-bottom: 20px;
-  
-      label {
-        font-size: 16px;
-        color: #333;
-      }
-  
-      select {
-        padding: 10px;
-        width: 100%;
-        margin-top: 5px;
-        border: 1px solid #ddd;
+      p {
+        font-size: 14px;
+        border: 1px solid #000;
         border-radius: 5px;
-        font-size: 16px;
+        padding: 4px 8px;
+        color: var(--theme-black-text);
+        &:hover {
+          cursor: pointer;
+          border: 1px solid #fff;
+          background-color: #e74c3c;
+          color: #fff;
+        }
       }
     }
   
