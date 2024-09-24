@@ -1,10 +1,12 @@
 @import "../../styles/index.scss";
 
-// .add-to-cart{
-//   margin-bottom: 0px;
-// }
-@import "../../styles/index.scss";
-
+.empty-cart{
+  h1{
+    @include font60;
+    text-align: center;
+    margin-bottom: 250px;
+  }
+}
 .cart-page {
   .back-btn {
     cursor: pointer;

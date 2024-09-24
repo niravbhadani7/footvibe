@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./women.scss";
 import categoryApi from "../../categoryApi/categoryApi";
 import { BsSearch } from "react-icons/bs";
-import {  Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 
 function Women() {
@@ -38,7 +38,7 @@ function Women() {
       toast.success("Item added to cart");
       window.location.reload();
     }
-  } 
+  };
 
   return (
     <div className="womens-main">
@@ -58,7 +58,7 @@ function Women() {
         <div className="women-card-main">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((item) => (
-              <div className="shoes-card">
+              <div key={item.id} className="shoes-card">
                 <Link
                   className="shoes-image"
                   to={`/product`}
@@ -86,7 +86,10 @@ function Women() {
                     )}
                   </div>
                   <div className="cart-wish">
-                    <button className="add-to-cart-btn" onClick={() => addToCart(item.id)}>
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={() => addToCart(item.id)}
+                    >
                       {item.cart ? item.cart : "Add to cart"}
                     </button>
                     {item.wishList ? (
@@ -99,7 +102,9 @@ function Women() {
               </div>
             ))
           ) : (
-            <span>No Products Available</span>
+            <div className="no-products">
+              <span>No Products Available</span>
+            </div>
           )}
         </div>
       </div>

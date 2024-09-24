@@ -25,7 +25,6 @@ function Men() {
 
   const openDetails = (i) => {
     localStorage.setItem("id", JSON.stringify(i));
-    // sessionStorage.setItem("scrollPosition", window.pageYOffset);
   };
 
   const addToCart = (i) => {
@@ -36,7 +35,6 @@ function Men() {
       cartData.push(i);
       localStorage.setItem("cartData", JSON.stringify(cartData));
       toast.success("Item added to cart");
-      window.location.reload();
     }
   };
 
@@ -58,34 +56,45 @@ function Men() {
           </div>
         </div>
         <div className="men-card-main">
-          {filteredProducts.map((item) => (
-            <div className="shoes-card" key={item.id}>
-              <Link className="shoes-image" 
-              onClick={() => openDetails(item.id)}
-              to={`/product`}
-              key={item.id}
-              >
-                <img src={item.image} alt={item.name} />
-              </Link>
-              <div className="shoes-details">
-                <h3 className="shoes-name">{item.name}</h3>
-                <div className="price-sec">
-                  <p className="shoes-price">{item.discounted_price}</p>
-                  <del>{item.original_price}</del>
-                  <span>{item.offer}</span>
-                </div>
-                <div className="shoes-size">
-                  {item.size.map((size, index) => (
-                    <p key={index}>{size}</p>
-                  ))}
-                </div>
-                <div className="cart-wish">
-                  <button className="add-to-cart-btn" onClick={() => addToCart(item.id)}>{item.cart}</button>
-                  <item.wishList className="fav-icon" />
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((item) => (
+              <div className="shoes-card" key={item.id}>
+                <Link
+                  className="shoes-image"
+                  onClick={() => openDetails(item.id)}
+                  to={`/product`}
+                >
+                  <img src={item.image} alt={item.name} />
+                </Link>
+                <div className="shoes-details">
+                  <h3 className="shoes-name">{item.name}</h3>
+                  <div className="price-sec">
+                    <p className="shoes-price">{item.discounted_price}</p>
+                    <del>{item.original_price}</del>
+                    <span>{item.offer}</span>
+                  </div>
+                  <div className="shoes-size">
+                    {item.size.map((size, index) => (
+                      <p key={index}>{size}</p>
+                    ))}
+                  </div>
+                  <div className="cart-wish">
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={() => addToCart(item.id)}
+                    >
+                      Add to Cart
+                    </button>
+                    {item.wishList && (
+                      <item.wishList className="fav-icon" />
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <span>No products available</span>
+          )}
         </div>
       </div>
     </div>
