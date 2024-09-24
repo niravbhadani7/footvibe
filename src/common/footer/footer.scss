@@ -100,25 +100,31 @@ footer {
 
 @media (max-width: 768px) {
   footer {
+    padding: 10px 0 20px 0;
     .footer-main {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
     }
 
     .footer-container {
       margin: 0;
       padding: 0 10px;
-      flex-grow: 1;
+      gap: 40px;
       .footer-item {
         margin-bottom: 20px;
         text-align: center;
         span {
           display: block;
-          margin: 10px;
-          // font-size: 14px;
+          margin: 15px 0 10px 0;
+          font-size: 16px;
+          font-weight: 700;
         }
         a {
-          // font-size: 13px;
+          padding: 2px 0;
+          font-size: 14px;
+          font-weight: 500;
+          display: block;
+          color: #000;
         }
       }
     }
@@ -126,16 +132,19 @@ footer {
     .footer-socials {
       margin-left: 0;
       .footer-logo h2 {
+        display: none;
         font-size: 22px;
       }
 
       .footer-socials-text span {
-        font-size: 14px;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 0 5px 0;
       }
 
       .footer-socials-icons {
         a {
-          font-size: 20px;
+          font-size: 24px;
           margin: 0 8px;
         }
       }
@@ -143,6 +152,7 @@ footer {
 
     .footer-copyright {
       p {
+        margin: 20px 0 10px 0;
         font-size: 12px;
       }
     }
@@ -155,12 +165,14 @@ footer {
     .footer-main {
       flex-direction: column-reverse;
       align-items: center;
+      
     }
 
     .footer-container {
       flex-direction: column;
       margin: 0;
       padding: 0 10px;
+      gap: 0;
       .footer-item {
         margin-bottom: 15px;
         text-align: center;
