@@ -14,19 +14,19 @@ export default function Footer() {
             <span>follow us</span>
           </div>
           <div className="footer-socials-icons">
-            <a href="#" target="_blank">
+            <a target="_blank">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" target="_blank">
+            <a target="_blank">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" target="_blank">
+            <a target="_blank">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" target="_blank">
+            <a target="_blank">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" target="_blank">
+            <a target="_blank">
               <i className="fab fa-youtube"></i>
             </a>
           </div>
@@ -34,25 +34,25 @@ export default function Footer() {
         <div className="footer-container">
           <div className="footer-item">
             <span>LET US HELP YOU</span>
-            <a href="#">Contact Us</a>
-            <a href="#">FAQ</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Check / Return Order</a>
+            <a>Contact Us</a>
+            <a>FAQ</a>
+            <a>Privacy Policy</a>
+            <a>Check / Return Order</a>
           </div>
           <div className="footer-item">
             <span>USEFUL LINKS</span>
-            <a href="#">Terms and Conditions</a>
-            <a href="#">Connect with us on WhatsApp</a>
-            <a href="#">Invite Bata Store On Wheels</a>
-            <a href="#">Become Our Partner</a>
+            <a>Terms and Conditions</a>
+            <a>Connect with us on WhatsApp</a>
+            <a>Invite Bata Store On Wheels</a>
+            <a>Become Our Partner</a>
           </div>
           <div className="footer-item">
             <span>COMPANY</span>
-            <a href="#">About Us</a>
-            <a href="#">BATA Worldwide</a>
-            <a href="#">The Footvibe Company</a>
-            <a href="#">Press Release</a>
-            <a href="#">Careers</a>
+            <a>About Us</a>
+            <a>BATA Worldwide</a>
+            <a>The Footvibe Company</a>
+            <a>Press Release</a>
+            <a>Careers</a>
           </div>
         </div>
       </div>
