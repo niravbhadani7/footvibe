@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /private/
 Allow: /
+Disallow: /
 Sitemap: https://footvibe.vercel.app/
