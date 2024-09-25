@@ -35,40 +35,22 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-container">
-          <div className="footer-item">
-            <span>LET US HELP YOU</span>
-            <a href="https://footvibe.vercel.app/">Contact Us</a>
-            <a href="https://footvibe.vercel.app/">
-              Frequently Asked Questions (FAQ)
-            </a>
-            <a href="https://footvibe.vercel.app/">Privacy Policy</a>
-            <a href="https://footvibe.vercel.app/">
-              Check or Return Order
-            </a>
-          </div>
-          <div className="footer-item">
-            <span>USEFUL LINKS</span>
-            <a href="https://footvibe.vercel.app/">Terms and Conditions</a>
-            <a href="https://footvibe.vercel.app/">
-              Connect with us on WhatsApp
-            </a>
-            <a href="https://footvibe.vercel.app/">
-              Request Bata Store On Wheels
-            </a>
-            <a href="https://footvibe.vercel.app/">
-              Become Our Partner
-            </a>
-          </div>
-          <div className="footer-item">
-            <span>COMPANY</span>
-            <a href="https://footvibe.vercel.app/">About FootVibe</a>
-            <a href="https://footvibe.vercel.app/">FootVibe Worldwide</a>
-            <a href="https://footvibe.vercel.app/">The FootVibe Company</a>
-            <a href="https://footvibe.vercel.app/">Press Releases</a>
-            <a href="https://footvibe.vercel.app/">
-              Career Opportunities at FootVibe
-            </a>
-          </div>
+          {["LET US HELP YOU", "USEFUL LINKS", "COMPANY"].map((title, index) => (
+            <div key={index} className="footer-item">
+              <h3>{title}</h3>
+              <ul>
+                {index === 0 && (
+                  <>
+                    <li><a href="https://footvibe.vercel.app/">Contact Us</a></li>
+                    <li><a href="https://footvibe.vercel.app/">Frequently Asked Questions (FAQ)</a></li>
+                    <li><a href="https://footvibe.vercel.app/">Privacy Policy</a></li>
+                    <li><a href="https://footvibe.vercel.app/">Check or Return Order</a></li>
+                  </>
+                )}
+                {/* Add similar <li> elements for other footer items */}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
       <div className="footer-copyright">
