@@ -14,46 +14,24 @@ export default function Footer() {
             <span>follow us</span>
           </div>
           <div className="footer-socials-icons">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-            >
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Twitter"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <i className="fab fa-youtube"></i>
-            </a>
+            {[ 
+              { href: "https://www.facebook.com", icon: "facebook-f", label: "Facebook" },
+              { href: "https://www.instagram.com", icon: "instagram", label: "Instagram" },
+              { href: "https://www.twitter.com", icon: "twitter", label: "Twitter" },
+              { href: "https://www.linkedin.com", icon: "linkedin-in", label: "LinkedIn" },
+              { href: "https://www.youtube.com", icon: "youtube", label: "YouTube" },
+            ].map(({ href, icon, label }) => (
+              <a
+                key={icon}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="social-icon-link"
+              >
+                <i className={`fab fa-${icon}`}></i>
+              </a>
+            ))}
           </div>
         </div>
         <div className="footer-container">

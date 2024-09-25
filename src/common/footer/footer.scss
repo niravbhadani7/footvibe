@@ -77,6 +77,8 @@ footer {
       }
     }
     .footer-socials-icons {
+      display: flex;
+      gap: 16px; // Increase spacing between icons
       a {
         color: #000;
         font-size: 22px;
@@ -218,5 +220,32 @@ footer {
         font-size: 11px;
       }
     }
+  }
+}
+
+.social-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px; // Increase touch target size
+  height: 44px; // Increase touch target size
+  border-radius: 50%;
+  background-color: #f0f0f0; // Add a background for better visibility
+  transition: background-color 0.3s ease;
+
+  &:hover, &:focus {
+    background-color: #e0e0e0; // Darker background on hover/focus
+  }
+
+  i {
+    font-size: 20px; // Increase icon size
+  }
+}
+
+.footer-item {
+  a {
+    display: inline-block;
+    padding: 8px 0; // Add vertical padding to increase touch target height
+    margin-bottom: 4px; // Add space between links
   }
 }
