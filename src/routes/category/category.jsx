@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Women from "../../components/women";
 import Men from "../../components/men";
 import DelaySuspense from "../../common/loader/delaySuspense/delaySuspense";
+import Kids from "../../components/kids";
 
 const Category = () => {
   const { category } = useParams();
@@ -21,7 +22,7 @@ const Category = () => {
 
       break;
     case "Kids":
-      content = <h1>KIDS</h1>;
+      content = <Kids />;
       break;
     case "Collections":
       content = <h1>COLLECTION</h1>;

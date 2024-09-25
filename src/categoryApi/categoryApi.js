@@ -937,6 +937,7 @@ const categoryApi = [
       },
     ],
   },
+
   {
     category: "KIDS",
     path: "/Kids",
