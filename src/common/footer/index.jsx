@@ -14,19 +14,19 @@ export default function Footer() {
             <span>follow us</span>
           </div>
           <div className="footer-socials-icons">
-            <a href="#footvibe.vercel.app" target="_blank">
+            <a href="#footvibe.vercel.app" target="_blank" aria-label="Facebook">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank">
+            <a href="#footvibe.vercel.app" target="_blank" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank">
+            <a href="#footvibe.vercel.app" target="_blank" aria-label="Twitter">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank">
+            <a href="#footvibe.vercel.app" target="_blank" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank">
+            <a href="#footvibe.vercel.app" target="_blank" aria-label="YouTube">
               <i className="fab fa-youtube"></i>
             </a>
           </div>
@@ -35,29 +35,29 @@ export default function Footer() {
           <div className="footer-item">
             <span>LET US HELP YOU</span>
             <a href="#footvibe.vercel.app">Contact Us</a>
-            <a href="#footvibe.vercel.app">FAQ</a>
+            <a href="#footvibe.vercel.app">Frequently Asked Questions (FAQ)</a>
             <a href="#footvibe.vercel.app">Privacy Policy</a>
-            <a href="#footvibe.vercel.app">Check / Return Order</a>
+            <a href="#footvibe.vercel.app">Check or Return Order</a>
           </div>
           <div className="footer-item">
             <span>USEFUL LINKS</span>
             <a href="#footvibe.vercel.app">Terms and Conditions</a>
             <a href="#footvibe.vercel.app">Connect with us on WhatsApp</a>
-            <a href="#footvibe.vercel.app">Invite Bata Store On Wheels</a>
+            <a href="#footvibe.vercel.app">Request Bata Store On Wheels</a>
             <a href="#footvibe.vercel.app">Become Our Partner</a>
           </div>
           <div className="footer-item">
             <span>COMPANY</span>
-            <a href="#">About Us</a>
-            <a href="#">BATA Worldwide</a>
-            <a href="#">The Footvibe Company</a>
-            <a href="#">Press Release</a>
-            <a href="#">Careers</a>
+            <a href="#footvibe.vercel.app">About FootVibe</a>
+            <a href="#footvibe.vercel.app">FootVibe Worldwide</a>
+            <a href="#footvibe.vercel.app">The FootVibe Company</a>
+            <a href="#footvibe.vercel.app">Press Releases</a>
+            <a href="#footvibe.vercel.app">Career Opportunities at FootVibe</a>
           </div>
         </div>
       </div>
       <div className="footer-copyright">
-        <p>&copy; 2024 Footvibe. All rights reserved.</p>
+        <p>&copy; 2024 FootVibe. All rights reserved.</p>
       </div>
     </footer>
   );
