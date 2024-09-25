@@ -14,19 +14,44 @@ export default function Footer() {
             <span>follow us</span>
           </div>
           <div className="footer-socials-icons">
-            <a href="#footvibe.vercel.app" target="_blank" aria-label="Facebook">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank" aria-label="Instagram">
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank" aria-label="Twitter">
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+            >
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank" aria-label="LinkedIn">
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#footvibe.vercel.app" target="_blank" aria-label="YouTube">
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
               <i className="fab fa-youtube"></i>
             </a>
           </div>
@@ -34,25 +59,37 @@ export default function Footer() {
         <div className="footer-container">
           <div className="footer-item">
             <span>LET US HELP YOU</span>
-            <a href="#footvibe.vercel.app">Contact Us</a>
-            <a href="#footvibe.vercel.app">Frequently Asked Questions (FAQ)</a>
-            <a href="#footvibe.vercel.app">Privacy Policy</a>
-            <a href="#footvibe.vercel.app">Check or Return Order</a>
+            <a href="https://footvibe.vercel.app/">Contact Us</a>
+            <a href="https://footvibe.vercel.app/">
+              Frequently Asked Questions (FAQ)
+            </a>
+            <a href="https://footvibe.vercel.app/">Privacy Policy</a>
+            <a href="https://footvibe.vercel.app/">
+              Check or Return Order
+            </a>
           </div>
           <div className="footer-item">
             <span>USEFUL LINKS</span>
-            <a href="#footvibe.vercel.app">Terms and Conditions</a>
-            <a href="#footvibe.vercel.app">Connect with us on WhatsApp</a>
-            <a href="#footvibe.vercel.app">Request Bata Store On Wheels</a>
-            <a href="#footvibe.vercel.app">Become Our Partner</a>
+            <a href="https://footvibe.vercel.app/">Terms and Conditions</a>
+            <a href="https://footvibe.vercel.app/">
+              Connect with us on WhatsApp
+            </a>
+            <a href="https://footvibe.vercel.app/">
+              Request Bata Store On Wheels
+            </a>
+            <a href="https://footvibe.vercel.app/">
+              Become Our Partner
+            </a>
           </div>
           <div className="footer-item">
             <span>COMPANY</span>
-            <a href="#footvibe.vercel.app">About FootVibe</a>
-            <a href="#footvibe.vercel.app">FootVibe Worldwide</a>
-            <a href="#footvibe.vercel.app">The FootVibe Company</a>
-            <a href="#footvibe.vercel.app">Press Releases</a>
-            <a href="#footvibe.vercel.app">Career Opportunities at FootVibe</a>
+            <a href="https://footvibe.vercel.app/">About FootVibe</a>
+            <a href="https://footvibe.vercel.app/">FootVibe Worldwide</a>
+            <a href="https://footvibe.vercel.app/">The FootVibe Company</a>
+            <a href="https://footvibe.vercel.app/">Press Releases</a>
+            <a href="https://footvibe.vercel.app/">
+              Career Opportunities at FootVibe
+            </a>
           </div>
         </div>
       </div>
