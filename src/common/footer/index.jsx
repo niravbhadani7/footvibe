@@ -17,36 +17,43 @@ export default function Footer() {
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
             >
-              <i className="fab fa-facebook-f"></i>
+              <i className="fab fa-facebook-f" aria-hidden="true"></i>
             </a>
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
             >
-              <i className="fab fa-instagram"></i>
+              <i className="fab fa-instagram"
+               aria-hidden="true"></i>
             </a>
             <a
               href="https://www.twitter.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
             >
-              <i className="fab fa-twitter"></i>
+              <i className="fab fa-twitter"
+               aria-hidden="true"></i>
             </a>
             <a
               href="https://www.linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
             >
-              <i className="fab fa-linkedin-in"></i>
+              <i className="fab fa-linkedin-in" aria-hidden="true"></i>
             </a>
             <a
               href="https://www.youtube.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
             >
-              <i className="fab fa-youtube"></i>
+              <i className="fab fa-youtube" aria-hidden="true"></i>
             </a>
           </div>
         </div>
