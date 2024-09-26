@@ -71,7 +71,7 @@ export default function Signup() {
     <div className="signup">
       <div className="container">
         <section>
-          <h1>Sign up</h1>
+          <h1>Signup</h1>
           <label>
             Username <span>{errors.username}</span>
             <input

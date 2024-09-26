@@ -15,7 +15,6 @@
         justify-content: center;    
         margin: 0 auto;
         flex-direction: column;
-        align-items: center;
         max-width: 360px;
         padding: 30px;
         background-color: #fff;
@@ -27,10 +26,10 @@
             letter-spacing: -1px;
             margin-bottom: 20px;
             color: #333;
+            text-align: center;
         }
         label{
             width: 100%;
-            margin-bottom: 10px;
             font-size: 18px;
             font-weight: 500;
             margin-bottom: 5px;
@@ -38,6 +37,8 @@
             span{
                 color: var(--theme-danger-text);
                 font-size: 14px;
+                display: block;
+                margin: 0;
             }
             input{
                 width: 100%;
@@ -62,6 +63,15 @@
             &:hover{
                 background-color: #f10001;
                 transition: .5s ease-in-out;
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            a{
+                color: #c30001;
             }
         }
     }

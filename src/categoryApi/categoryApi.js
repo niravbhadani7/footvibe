@@ -41,6 +41,27 @@ import menCard18 from "../assets/image/menshoes (18).webp";
 import menCard19 from "../assets/image/menshoes (19).webp";
 import menCard20 from "../assets/image/menshoes (20).webp";
 import menCard21 from "../assets/image/menshoes (21).webp";
+import kidsCard1 from "../assets/image/kids (1).webp";
+import kidsCard2 from "../assets/image/kids (2).webp";
+import kidsCard3 from "../assets/image/kids (3).webp";
+import kidsCard4 from "../assets/image/kids (4).webp";
+import kidsCard5 from "../assets/image/kids (5).webp";
+import kidsCard6 from "../assets/image/kids (6).webp";
+import kidsCard7 from "../assets/image/kids (7).webp";
+import kidsCard8 from "../assets/image/kids (8).webp";
+import kidsCard9 from "../assets/image/kids (9).webp";
+import kidsCard10 from "../assets/image/kids (10).webp";
+import kidsCard11 from "../assets/image/kids (11).webp";
+import kidsCard12 from "../assets/image/kids (12).webp";
+import kidsCard13 from "../assets/image/kids (13).webp";
+import kidsCard14 from "../assets/image/kids (14).webp";
+import kidsCard15 from "../assets/image/kids (15).webp";
+import kidsCard16 from "../assets/image/kids (16).webp";
+import kidsCard17 from "../assets/image/kids (17).webp";
+import kidsCard18 from "../assets/image/kids (18).webp";
+import kidsCard19 from "../assets/image/kids (19).webp";
+import kidsCard20 from "../assets/image/kids (20).webp";
+import kidsCard21 from "../assets/image/kids (21).webp";
 
 const categoryApi = [
   {
@@ -516,7 +537,7 @@ const categoryApi = [
     path: "/Men",
     product: [
       {
-        id : 101,
+        id: 101,
         image: menCard12,
         name: "HUSH PUPPIES",
         discounted_price: 49.99,
@@ -533,10 +554,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 102,
+        id: 102,
         image: menCard11,
         name: "HUSH PUPPIES",
         original_price: 79.99,
@@ -553,10 +574,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 103,
+        id: 103,
         image: menCard10,
         name: "POWER",
         original_price: 129.99,
@@ -573,10 +594,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 104,
+        id: 104,
         image: menCard9,
         name: "Loafer",
         original_price: 89.99,
@@ -593,10 +614,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 105,
+        id: 105,
         image: menCard8,
         name: "BATA",
         original_price: 39.99,
@@ -613,10 +634,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 106,
+        id: 106,
         image: menCard7,
         name: "HUSH PUPPIES",
         original_price: 99.99,
@@ -633,10 +654,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 107,
+        id: 107,
         image: menCard6,
         name: "BATA",
         original_price: 119.99,
@@ -653,10 +674,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 108,
+        id: 108,
         image: menCard5,
         name: "POWER",
         original_price: 19.99,
@@ -673,10 +694,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 109,
+        id: 109,
         image: menCard4,
         name: "HUSH PUPPIES",
         original_price: 79.99,
@@ -693,10 +714,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 110,
+        id: 110,
         image: menCard3,
         name: "POWER",
         original_price: 149.99,
@@ -713,10 +734,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 111,
+        id: 111,
         image: menCard2,
         name: "POWER",
         original_price: 89.99,
@@ -733,10 +754,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 112,
+        id: 112,
         image: menCard1,
         name: "HUSH PUPPIES",
         original_price: 79.99,
@@ -753,10 +774,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 113,
+        id: 113,
         image: menCard13,
         name: "POWER",
         original_price: 129.99,
@@ -773,10 +794,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 114,
+        id: 114,
         image: menCard14,
         name: "BATA",
         original_price: 89.99,
@@ -793,10 +814,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 115,
+        id: 115,
         image: menCard15,
         name: "POWER",
         original_price: 39.99,
@@ -813,10 +834,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 116,
+        id: 116,
         image: menCard16,
         name: "BATA",
         original_price: 99.99,
@@ -833,10 +854,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 117,
+        id: 117,
         image: menCard17,
         name: "SLIDER",
         original_price: 119.99,
@@ -853,10 +874,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 118,
+        id: 118,
         image: menCard18,
         name: "BATA",
         original_price: 19.99,
@@ -873,10 +894,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 119,
+        id: 119,
         image: menCard19,
         name: "SENDAL",
         original_price: 79.99,
@@ -893,10 +914,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 120,
+        id: 120,
         image: menCard20,
         name: "HUSH PUPPIES",
         original_price: 149.99,
@@ -913,10 +934,10 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
       {
-        id : 121,
+        id: 121,
         image: menCard21,
         name: "HUSH PUPPIES",
         original_price: 89.99,
@@ -933,7 +954,7 @@ const categoryApi = [
           "Breathable mesh upper",
           "Responsive foam midsole",
           "Rubber outsole for traction",
-        ]
+        ],
       },
     ],
   },
@@ -941,7 +962,197 @@ const categoryApi = [
   {
     category: "KIDS",
     path: "/Kids",
-    product: [],
+    product: [
+      {
+        id: 201,
+        image: kidsCard1,
+        name: "HUSH PUPPIES",
+        original_price: 49.99,
+        discounted_price: 25.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 202,
+        image: kidsCard2,
+        name: "POWER",
+        original_price: 79.99,
+        discounted_price: 39.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 203,
+        image: kidsCard3,
+        name: "POWER",
+        original_price: 129.99,
+        discounted_price: 65.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 204,
+        image: kidsCard4,
+        name: "POWER",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 205,
+        image: kidsCard5,
+        name: "POWER",
+        original_price: 39.99,
+        discounted_price: 19.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 206,
+        image: kidsCard6,
+        name: "POWER",
+        original_price: 99.99,
+        discounted_price: 49.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 207,
+        image: kidsCard7,
+        name: "POWER",
+        original_price: 119.99,
+        discounted_price: 59.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 208,
+        image: kidsCard8,
+        name: "POWER",
+        original_price: 19.99,
+        discounted_price: 9.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 209,
+        image: kidsCard9,
+        name: "POWER",
+        original_price: 79.99,
+        discounted_price: 39.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 210,
+        image: kidsCard10,
+        name: "POWER",
+        original_price: 149.99,
+        discounted_price: 75.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 211,
+        image: kidsCard11,
+        name: "POWER",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 212,
+        image: kidsCard12,
+        name: "POWER",
+        original_price: 79.99,
+        discounted_price: 40.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 213,
+        image: kidsCard13,
+        name: "POWER",
+        original_price: 129.99,
+        discounted_price: 65.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 214,
+        image: kidsCard14,
+        name: "POWER",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 215,
+        image: kidsCard15,
+        name: "POWER",
+        original_price: 39.99,
+        discounted_price: 19.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 216,
+        image: kidsCard16,
+        name: "POWER",
+        original_price: 99.99,
+        discounted_price: 49.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 217,
+        image: kidsCard17,
+        name: "POWER",
+        original_price: 119.99,
+        discounted_price: 59.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 218,
+        image: kidsCard18,
+        name: "POWER",
+        original_price: 19.99,
+        discounted_price: 9.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 219,
+        image: kidsCard19,
+        name: "POWER",
+        original_price: 79.99,
+        discounted_price: 39.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 220,
+        image: kidsCard20,
+        name: "POWER",
+        original_price: 149.99,
+        discounted_price: 75.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+      {
+        id: 221,
+        image: kidsCard21,
+        name: "POWER",
+        original_price: 89.99,
+        discounted_price: 45.99,
+        offer: "50 % OFF",
+        size: ["UK 7", "UK 8", "UK 9", "UK 10"],
+      },
+    ],
   },
   {
     category: "COLLECTIONS",
