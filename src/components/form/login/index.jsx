@@ -34,7 +34,7 @@ export default function Login() {
           <h1>Login</h1>
           <label>
             Username <span></span>
-            <input type="email" name="email" onChange={handleChange} />
+            <input type="email" name="email" onChange={handleChange} placeholder="Enter your email" />
           </label>
           <div className="password-container">
             <label>
@@ -42,6 +42,7 @@ export default function Login() {
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
+                placeholder="Enter your password"
                 onChange={handleChange}
                 // placeholder="Enter your password"
               />

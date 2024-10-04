@@ -1,0 +1,54 @@
+@import "../../../styles/index.scss";
+
+.sale-banner {
+  .sale-banner-img {
+    display: flex;
+    margin: 20px 20px;
+    .sale-banner-img-item {
+      position: relative;
+      img {
+        max-width: 436px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .sale-banner-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .sale-banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        p {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        h1 {
+          font-family: "Antonio", sans-serif;
+            margin-top: 10px;
+          font-size: 40px;
+          font-weight: 600;
+          letter-spacing: .02rem;
+        }
+      }
+      button {
+        position: absolute;
+        transform: translate(-50%, 0%);
+        top: 60%;
+        left: 50%;
+        color: #fff;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 15px 40px;
+        border: 2px solid #fff;
+      }
+    }
+  }
+}

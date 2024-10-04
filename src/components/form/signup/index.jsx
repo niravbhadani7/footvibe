@@ -77,6 +77,7 @@ export default function Signup() {
             <input
               type="text"
               name="username"
+              placeholder="Enter your username"
               onChange={handleChange}
               value={userInfo.username}
             />
@@ -86,6 +87,7 @@ export default function Signup() {
             <input
               type="email"
               name="email"
+              placeholder="Enter your email"
               onChange={handleChange}
               value={userInfo.email}
             />
@@ -96,6 +98,7 @@ export default function Signup() {
               <input
                 type={showPassword ? "text" : "password"}
                 name="password"
+                placeholder="Enter your password"
                 value={userInfo.password}
                 onChange={handleChange}
                 // placeholder="Enter your password"

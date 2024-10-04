@@ -7,7 +7,7 @@
   @media (max-width: 768px) {
     margin-top: 20px;
   }
-  margin-top: 40px;
+  margin-top: 20px;
   .container {
     .men-search-main {
       display: flex;
@@ -77,7 +77,7 @@
         grid-template-columns: repeat(1, 1fr);
         margin-top: 20px;
       }
-      margin-top: 40px;
+      margin-top: 30px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-column-gap: 20px;
@@ -88,7 +88,6 @@
         border: 1px solid #ddd;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
 
         &:hover {
@@ -105,7 +104,7 @@
 
         .shoes-details {
           padding: 0px 10px 10px 10px;
-          text-align: center;
+          text-align: left;
 
           .shoes-name {
             font-size: 1.2em;
@@ -116,20 +115,20 @@
           .price-sec {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 15px;
             margin-bottom: 10px;
+            text-align: left;
 
             .shoes-price {
               font-size: 22px;
             }
             del {
-              font-size: 13px;
+              font-size: 15px;
               color: rgb(110, 120, 126);
             }
             span {
               color: var(--theme-danger-text);
-              font-size: 13px;
+              font-size: 15px;
               font-weight: 700;
               display: block;
               margin: 0;
@@ -138,9 +137,9 @@
           .shoes-size {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 10px;
             margin-bottom: 10px;
+            text-align: left;
             p {
               font-size: 14px;
               border: 1px solid #000;
@@ -158,7 +157,8 @@
           .cart-wish {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
+            
             gap: 20px;
             .fav-icon {
               font-size: 27px;
