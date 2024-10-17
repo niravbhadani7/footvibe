@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import categoryApi from "../../categoryApi/categoryApi";
-import toast from "react-hot-toast";
 import "./kids.scss";
+import { addToCart } from "../../redux/cart/cart";
+import { useDispatch } from "react-redux";
 
 function Kids() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(categoryApi[2].product);
+  const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -24,17 +26,11 @@ function Kids() {
     localStorage.setItem("id", JSON.stringify(id));
   };
 
-  const addToCart = (id) => {
-    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    if (cartData.find((el) => el === id)) {
-      toast.error("Item already in cart");
-    } else {
-      cartData.push(id);
-      localStorage.setItem("cartData", JSON.stringify(cartData));
-      toast.success("Item added to cart");
-    }
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
   };
-  
+
+ 
   return (
     <div className="kids">
       <div className="container">
@@ -78,7 +74,7 @@ function Kids() {
                   <div className="cart-wish">
                     <button
                       className="add-to-cart-btn"
-                      onClick={() => addToCart(item.id)}
+                      onClick={() => handleAddToCart(item)}
                     >
                       Add to Cart
                     </button>

@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
-import Shoes1 from "../../assets/image/cardshoes (1).webp";
-import Shoes2 from "../../assets/image/cardshoes (2).webp";
-import Shoes3 from "../../assets/image/cardshoes (3).webp";
 import "./productInformation.scss";
 import { IoMdArrowBack } from "react-icons/io";
 import categoryApi from "../../categoryApi/categoryApi";
 import toast from "react-hot-toast";
+import { addToCart } from "../../redux/cart/cart";
+import { useDispatch } from "react-redux";
 
 function ProductInfo() {
   const [activeTab, setActiveTab] = useState("details");
   const [productData, setProductData] = useState(null);
+  const dispatch = useDispatch();
+  
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   useEffect(() => {
     const id = JSON.parse(localStorage.getItem("id"));
@@ -27,17 +31,6 @@ function ProductInfo() {
 
   const backButton = () => {
     window.history.back();
-  };
-
-  const addToCart = (id) => {
-    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    if (cartData.includes(id)) {
-      toast.error("Item already in cart");
-    } else {
-      cartData.push(id);
-      localStorage.setItem("cartData", JSON.stringify(cartData));
-      toast.success("Item added to cart");
-    }
   };
 
   if (!productData) {
@@ -84,7 +77,7 @@ function ProductInfo() {
           {/* Add to Cart Button */}
           <button
             className="add-to-cart"
-            onClick={() => addToCart(productData.id)}
+            onClick={() => handleAddToCart(productData)}
           >
             {productData.cart}
           </button>

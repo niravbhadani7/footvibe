@@ -2,14 +2,16 @@ import React, { useState } from "react";
 import "./men.scss";
 import categoryApi from "../../categoryApi/categoryApi";
 import { BsSearch } from "react-icons/bs";
-import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cart/cart";
 
 function Men() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(
     categoryApi[1].product
   ); // Initial state set to all products
+  const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -27,17 +29,9 @@ function Men() {
     localStorage.setItem("id", JSON.stringify(i));
   };
 
-  const addToCart = (i) => {
-    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    if (cartData.find((el) => el === i)) {
-      toast.error("Item already in cart");
-    } else {
-      cartData.push(i);
-      localStorage.setItem("cartData", JSON.stringify(cartData));
-      toast.success("Item added to cart");
-    }
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
   };
-
   return (
     <div className="mens-main">
       <div className="container">
@@ -69,8 +63,8 @@ function Men() {
                 <div className="shoes-details">
                   <h3 className="shoes-name">{item.name}</h3>
                   <div className="price-sec">
-                    <p className="shoes-price">{item.discounted_price}</p>
-                    <del>{item.original_price}</del>
+                    <p className="shoes-price">${item.discounted_price}</p>
+                    <del>${item.original_price}</del>
                     <span>{item.offer}</span>
                   </div>
                   <div className="shoes-size">
@@ -81,7 +75,7 @@ function Men() {
                   <div className="cart-wish">
                     <button
                       className="add-to-cart-btn"
-                      onClick={() => addToCart(item.id)}
+                      onClick={() => handleAddToCart(item)}
                     >
                       Add to Cart
                     </button>

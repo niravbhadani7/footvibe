@@ -1,0 +1,104 @@
+@import '../../styles/index.scss';
+
+.wishlist-card {
+  cursor: pointer;
+  border: 1px solid var(--theme-gray-300-border);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .wishlist-image {
+    img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+  }
+
+  .wishlist-details {
+    padding: 10px;
+    text-align: left;
+
+    .wishlist-name {
+      font-size: 1.2em;
+      color: var(--theme-black-text);
+      margin-bottom: 5px;
+    }
+
+    .price-sec {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 15px;
+      margin-bottom: 10px;
+      
+      .wishlist-price {
+        line-height: normal;
+        font-size: 22px;
+        color: var(--theme-black-text);
+      }
+      del {
+        font-size: 15px;
+        color: var(--theme-gray-600-text);
+      }
+      span {
+        color: var(--theme-danger-text);
+        font-size: 15px;
+        font-weight: 700;
+      }
+    }
+
+    .wishlist-size {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 10px;
+      margin-bottom: 10px;
+      p {
+        font-size: 14px;
+        border: 1px solid var(--theme-black-border);
+        border-radius: 5px;
+        padding: 4px 8px;
+        color: var(--theme-black-text);
+        &:hover {
+          cursor: pointer;
+          border: 1px solid var(--theme-white-border);
+          background-color: var(--theme-danger-background);
+          color: var(--theme-white-text);
+        }
+      }
+    }
+
+    .wishlist-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      .remove-from-wishlist {
+        font-size: 27px;
+        cursor: pointer;
+        color: var(--theme-black-border);
+      }
+
+      .add-to-cart-btn {
+        background-color: var(--theme-danger-background);
+        color: var(--theme-white-text);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: var(--theme-red-background);
+        }
+      }
+    }
+  }
+}

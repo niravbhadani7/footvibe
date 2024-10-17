@@ -8,6 +8,7 @@ import { FiMenu } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
 import { GoPerson } from "react-icons/go";
+import { useSelector } from "react-redux";
 
 const category = categoryApi;
 function Header() {
@@ -32,8 +33,12 @@ function Header() {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+  
 
-  const cartCount = JSON.parse(localStorage.getItem("cartData")) || [];
+
+  const cartCount = useSelector(state => state.cart.cartCount);
+  
+
 
   return (
     <header>
@@ -85,14 +90,14 @@ function Header() {
           </div>
           <div className="user-tools">
             <div className="header-fav-cart">
-              <div className="header-fav">
+              <Link to={"/whishlist"} className="header-fav">
                 <MdFavoriteBorder className="fav-icon" />
                 <p>Wishlist</p>
-              </div>
+              </Link>
               <Link to={"/cart"} className="header-cart">
                 <IoCartOutline className="bag-icon" />
                 <p>Store</p>
-                <div className="header-cart-count">{cartCount.length}</div>
+                <div className="header-cart-count">{cartCount}</div>
               </Link>
               <div className="header-login">
                 <Link to={"/signup"}>

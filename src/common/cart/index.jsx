@@ -1,46 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./cart.scss";
-import { IoMdArrowBack } from "react-icons/io";
+import { IoMdArrowBack, IoMdAdd, IoMdRemove } from "react-icons/io";
 import { MdClose } from "react-icons/md";
-import categoryApi from "../../categoryApi/categoryApi";
-import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { removeFromCart, updateCartItemQuantity } from "../../redux/cart/cart";
 
 function Cart() {
-  const [cartData, setCartData] = useState([]);
-  const [activeTab, setActiveTab] = useState("details");
+  const dispatch = useDispatch();
+  const cartItems = useSelector(state => state.cart.cartItems);
 
-  useEffect(() => {
-    // Fetch cart data from localStorage
-    const cartItems = JSON.parse(localStorage.getItem("cartData")) || [];
-    if (cartItems.length > 0) {
-      // Flatten categories and filter products based on cart items
-      const products = categoryApi.flatMap((category) => category.product);
-      const filteredProducts = products.filter((item) =>
-        cartItems.includes(item.id)
-      );
-      setCartData(filteredProducts);
+  const handleRemove = (id) => {
+    dispatch(removeFromCart(id));
+  };
+
+  const handleQuantityChange = (id, change) => {
+    const item = cartItems.find(item => item.id === id);
+    if (item) {
+      dispatch(updateCartItemQuantity({ id, quantity: item.quantity + change }));
     }
-  }, []);
+  };
 
   const backButton = () => {
     window.history.back();
   };
 
-  const handleRemove = (id) => {
-    const updatedCart = cartData.filter((item) => item.id !== id);
-    setCartData(updatedCart); // Update state to re-render component
-    localStorage.setItem(
-      "cartData",
-      JSON.stringify(updatedCart.map((item) => item.id))
-    );
-    toast.success("Item removed from cart");
-  };
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-  };
-
-  if (cartData.length === 0) {
+  if (cartItems.length === 0) {
     return (
       <div className="empty-cart">
         <div className="back-btn">
@@ -51,15 +36,17 @@ function Cart() {
     );
   }
 
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const totalPrice = cartItems.reduce((sum, item) => sum + (item.discounted_price || item.price) * item.quantity, 0).toFixed(2);
+
   return (
     <div className="cart-page">
       <div className="back-btn">
         <IoMdArrowBack onClick={backButton} aria-label="Go back" />
       </div>
-      <h1>Cart</h1>
-      {cartData.map((item, i) => (
-        <div key={item.id} className="product-page">
-          {/* Product Gallery Section */}
+      <h1>Your Cart</h1>
+      {cartItems.map((item) => (
+        <div key={item.id} className="product-page-cart">
           <MdClose
             className="remove-btn-top"
             onClick={() => handleRemove(item.id)}
@@ -70,64 +57,47 @@ function Cart() {
               <img src={item.image} alt={item.name} />
             </div>
           </div>
-
-          {/* Product Info Section */}
           <div className="product-info">
-            <div className="top-flex">
+            <div className="product-name-cart">
               <h2>{item.name}</h2>
-              <MdClose
-                className="remove-btn"
-                onClick={() => handleRemove(item.id)}
-                aria-label={`Remove ${item.name} from cart`}
-              />
             </div>
-            <p className="price">$ {item.discounted_price}</p>
+            <p className="price">
+              $ {((item.discounted_price || item.price) * item.quantity).toFixed(2)}
+            </p>
             <div className="shoes-size">
-              {item.size.map((size, index) => (
-                <p key={index}>{size}</p>
-              ))}
+              {item.size && item.size.map((size, index) => <p key={index}>{size}</p>)}
             </div>
-
-            {/* Buy Now Button */}
-            <button className="add-to-cart-data">Buy Now</button>
-
-            {/* Product Details and Reviews Tabs */}
-            <div className="tab-container">
+            <div className="quantity-control">
               <button
-                onClick={() => handleTabClick("details")}
-                className={activeTab === "details" ? "active" : ""}
+                onClick={() => handleQuantityChange(item.id, -1)}
+                aria-label="Decrease quantity"
               >
-                {item.details}
+                <IoMdRemove />
               </button>
+              <span>{item.quantity}</span>
               <button
-                onClick={() => handleTabClick("reviews")}
-                className={activeTab === "reviews" ? "active" : ""}
+                onClick={() => handleQuantityChange(item.id, 1)}
+                aria-label="Increase quantity"
               >
-                {item.review}
+                <IoMdAdd />
               </button>
-
-              <div className="tab-content">
-                {activeTab === "details" && (
-                  <div className="details">
-                    <h3>{item.details}</h3>
-                    <ul>
-                      <li>Breathable mesh upper</li>
-                      <li>Responsive foam midsole</li>
-                      <li>Rubber outsole for traction</li>
-                    </ul>
-                  </div>
-                )}
-                {activeTab === "reviews" && (
-                  <div className="reviews">
-                    <h3>Customer Reviews</h3>
-                    <p>No reviews yet.</p>
-                  </div>
-                )}
-              </div>
+            </div>
+            <div className="add-to-cart-data">
+              <Link to="/checkout">
+                <button>Buy Now</button>
+              </Link>
             </div>
           </div>
         </div>
       ))}
+      <div className="cart-summary">
+        <h2>Cart Summary</h2>
+        <p>Total Items: {totalItems}</p>
+        <p>Total Price: $ {totalPrice}</p>
+        <Link to="/checkout">
+          <button className="checkout-btn">Proceed to Checkout</button>
+        </Link>
+      </div>
     </div>
   );
 }

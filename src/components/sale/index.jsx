@@ -2,52 +2,39 @@ import React, { useState, useEffect } from 'react'
 import "./sale.scss";
 import categoryApi from '../../categoryApi/categoryApi';
 import { BsSearch } from 'react-icons/bs';
-import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { addToCart } from "../../redux/cart/cart";
+import { useDispatch } from "react-redux";
 
 function Sale() {
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [filteredProducts, setFilteredProducts] = useState([]);
-    const [allProducts, setAllProducts] = useState([]);
-
-    useEffect(() => {
-        // Combine products from categories 1, 2, and 3
-        const combinedProducts = [
-            ...categoryApi[0].product,
-            ...categoryApi[1].product,
-            ...categoryApi[2].product
-        ];
-        setAllProducts(combinedProducts);
-        setFilteredProducts(combinedProducts);
-    }, []);
-
+    const [filteredProducts, setFilteredProducts] = useState(
+      categoryApi[0].product
+    ); // Initial state set to all products
+    const dispatch = useDispatch();
+    
+  
     const handleSearch = (e) => {
-        const term = e.target.value;
-        setSearchTerm(term);
-
-        // Filter products based on search term
-        const filtered = allProducts.filter(
-            (product) =>
-                product.name && product.name.toUpperCase().includes(term.toUpperCase())
-        );
-        setFilteredProducts(filtered);
+      const term = e.target.value;
+      setSearchTerm(term);
+  
+      // Filter products based on search term
+      const filtered = categoryApi[0].product.filter(
+        (product) =>
+          product.name && product.name.toUpperCase().includes(term.toUpperCase())
+      );
+      setFilteredProducts(filtered); // Update the state with filtered products
     };
-
+  
     const openDetails = (i) => {
-        localStorage.setItem("id", JSON.stringify(i));
+      localStorage.setItem("id", JSON.stringify(i));
+      // sessionStorage.setItem("scrollPosition", window.pageYOffset);
     };
 
-    const addToCart = (i) => {
-        const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-        if (cartData.find((el) => el === i)) {
-            toast.error("Item already in cart");
-        } else {
-            cartData.push(i);
-            localStorage.setItem("cartData", JSON.stringify(cartData));
-            toast.success("Item added to cart");
-        }
-    };
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+      };
 
     return (
         <div className="sale-main">
@@ -80,8 +67,8 @@ function Sale() {
                                 <div className="sale-details">
                                     <h3 className="sale-name">{item.name}</h3>
                                     <div className="sale-price-sec">
-                                        <p className="sale-price">{item.discounted_price}</p>
-                                        <del>{item.original_price}</del>
+                                        <p className="sale-price">${item.discounted_price}</p>
+                                        <del>${item.original_price}</del>
                                         <span>{item.offer}</span>
                                     </div>
                                     <div className="sale-size">
@@ -92,7 +79,7 @@ function Sale() {
                                     <div className="sale-cart-wish">
                                         <button
                                             className="sale-add-to-cart-btn"
-                                            onClick={() => addToCart(item.id)}
+                                            onClick={() => handleAddToCart(item)}
                                         >
                                             Add to Cart
                                         </button>

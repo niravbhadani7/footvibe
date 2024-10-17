@@ -7,6 +7,8 @@ import Category from "./category/category";
 import DelaySuspense from "../common/loader/delaySuspense/delaySuspense";
 import ProductInfo from "../components/productInformation"; // Ensure this is imported
 import Cart from "../common/cart";
+import Whishlist from "../common/whishlist";
+
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/whishlist",
+        element: <Whishlist/>,
       },
       {
         path: "/product",

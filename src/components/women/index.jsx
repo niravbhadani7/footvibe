@@ -3,13 +3,15 @@ import "./women.scss";
 import categoryApi from "../../categoryApi/categoryApi";
 import { BsSearch } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import toast from "react-hot-toast";
+import { addToCart } from "../../redux/cart/cart";
+import { useDispatch } from "react-redux";
 
 function Women() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(
     categoryApi[0].product
   ); // Initial state set to all products
+  const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     const term = e.target.value;
@@ -28,17 +30,10 @@ function Women() {
     // sessionStorage.setItem("scrollPosition", window.pageYOffset);
   };
 
-  const addToCart = (i) => {
-    const cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    if (cartData.find((el) => el === i)) {
-      toast.error("Item already in cart");
-    } else {
-      cartData.push(i);
-      localStorage.setItem("cartData", JSON.stringify(cartData));
-      toast.success("Item added to cart");
-      window.location.reload();
-    }
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
   };
+
 
   return (
     <div className="womens-main">
@@ -70,8 +65,8 @@ function Women() {
                 <div className="shoes-details">
                   <h3 className="shoes-name">{item.name}</h3>
                   <div className="price-sec">
-                    <p className="shoes-price">{item.discounted_price}</p>
-                    <del>{item.original_price}</del>
+                    <p className="shoes-price">${item.discounted_price}</p>
+                    <del>${item.original_price}</del>
                     {item.offer ? (
                       <span>{item.offer}</span>
                     ) : (
@@ -88,7 +83,7 @@ function Women() {
                   <div className="cart-wish">
                     <button
                       className="add-to-cart-btn"
-                      onClick={() => addToCart(item.id)}
+                      onClick={() => handleAddToCart(item)}
                     >
                       {item.cart ? item.cart : "Add to cart"}
                     </button>
