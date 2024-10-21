@@ -1,6 +1,9 @@
 @import "../../../styles/index.scss";
 
 .sale-banner {
+  @media (max-width: 1000px) {
+    display: none;
+  }
   .sale-banner-img {
     display: flex;
     margin: 20px 20px;

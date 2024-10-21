@@ -8,6 +8,7 @@ export default function Signup() {
     email: "",
     password: "",
   });
+  const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -21,7 +22,6 @@ export default function Signup() {
     setErrors({ ...errors, [name]: "" });
   };
 
-  const [errors, setErrors] = useState({});
   const validForm = () => {
     let error = {};
     let isValid = true;
