@@ -8,6 +8,7 @@ import DelaySuspense from "../common/loader/delaySuspense/delaySuspense";
 import ProductInfo from "../components/productInformation"; // Ensure this is imported
 import Cart from "../common/cart";
 import Whishlist from "../common/whishlist";
+import CheckOut from "../components/checkOut";
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart />,
+      },
+      {
+        path: "/checkout",
+        element: <CheckOut/>
       },
       {
         path: "/whishlist",

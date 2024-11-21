@@ -2,13 +2,14 @@ import React from "react";
 import "./cart.scss";
 import { IoMdArrowBack, IoMdAdd, IoMdRemove } from "react-icons/io";
 import { MdClose } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, updateCartItemQuantity } from "../../redux/cart/cart";
 
 function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector(state => state.cart.cartItems);
+  const navigate = useNavigate();
 
   const handleRemove = (id) => {
     dispatch(removeFromCart(id));
@@ -23,6 +24,18 @@ function Cart() {
 
   const backButton = () => {
     window.history.back();
+  };
+
+  const handleProceedToCheckout = () => {
+    const checkoutData = {
+      items: cartItems,
+      totalItems: totalItems,
+      totalAmount: totalPrice
+    };
+    
+    // Store checkout data in localStorage
+    localStorage.setItem('checkoutData', JSON.stringify(checkoutData));
+    navigate('/checkout');
   };
 
   if (cartItems.length === 0) {
@@ -94,12 +107,16 @@ function Cart() {
         <h2>Cart Summary</h2>
         <p>Total Items: {totalItems}</p>
         <p>Total Price: $ {totalPrice}</p>
-        <Link to="/checkout">
-          <button className="checkout-btn">Proceed to Checkout</button>
-        </Link>
+        <button 
+          className="checkout-btn"
+          onClick={handleProceedToCheckout}
+        >
+          Proceed to Checkout
+        </button>
       </div>
     </div>
   );
 }
 
 export default Cart;
+
